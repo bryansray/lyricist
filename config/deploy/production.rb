@@ -51,6 +51,7 @@ namespace :deploy do
       password: 
       database: lyricist_production
       host: localhost
+      socket: /var/run/mysqld/mysqld.sock
     EOF
     
     put db_config, "#{release_path}/config/database.yml"
