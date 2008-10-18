@@ -1,20 +1,26 @@
-<h1>Listing searches</h1>
+<div class="span-18 body">
+	
+	<h1>Listing searches</h1>
 
-<table>
-  <tr>
-    <th>Keywords</th>
-  </tr>
+	<table>
+	  <tr>
+	    <th>Keywords</th>
+	  </tr>
 
-<% for search in @searches %>
-  <tr>
-    <td><%=h search.keywords %></td>
-    <td><%= link_to 'Show', search %></td>
-    <td><%= link_to 'Edit', edit_search_path(search) %></td>
-    <td><%= link_to 'Destroy', search, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
+	<% for search in @searches %>
+	  <tr>
+	    <td><%=h search.keywords %></td>
+	    <td><%= link_to 'Show', search %></td>
+	    <td><%= link_to 'Edit', edit_search_path(search) %></td>
+	    <td><%= link_to 'Destroy', search, :confirm => 'Are you sure?', :method => :delete %></td>
+	  </tr>
+	<% end %>
+	</table>
 
-<br />
+	<%= link_to 'New search', new_search_path %>
+	
+</div>
 
-<%= link_to 'New search', new_search_path %>
+<div class="span-6 last rail">
+	<p>modules here to assist in search and also promote other areas of the site, 2 or 3 blocks of content</p>
+</div>

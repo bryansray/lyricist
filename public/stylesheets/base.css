@@ -128,8 +128,6 @@ caption     { background: #eee; }
 /* ---------- HEADER --------------------------*/
 .header { 
 	background-color:#041121;
-/*	border-bottom: 7px solid #65AEF3;
-	border-bottom:4px solid #F59A09;*/
 }
 
 .header p{ margin-bottom: 0;}
@@ -161,8 +159,19 @@ caption     { background: #eee; }
 		-moz-border-radius-topleft: 1em; -webkit-border-top-left-radius: 1em;
 		-moz-border-radius-topright: 1em; -webkit-border-top-right-radius: 1em;
 	}
-
-	.nav .sf-menu {	margin: .2em 0; }
+	
+	.nav ul { }
+	.nav ul li { margin: 0 .25em 0 0; padding: .5em .25em 0 .25em; list-style-type: none; float: left; font-weight: bold; text-transform: uppercase; }
+	.nav ul li a { display: block; color: #fff; }
+	
+	.nav { }
+	.nav ul { /*width: 980px; margin: 0 auto;*/ margin: 0; }
+	.nav ul li.current { }
+	.nav ul li a { padding: .25em .5em 0.5em .5em; text-decoration: none; }
+	.nav ul li.current a, div#nav ul li.current a:hover { color: #0a396f; background-color: #fff; -moz-border-radius-topleft: .5em; -webkit-border-top-left-radius: .5em;
+	-moz-border-radius-topright: .5em; -webkit-border-top-right-radius: .5em; }
+	.nav ul li a:hover { color: #0a396f; background-color: #fff; -moz-border-radius-topleft: .5em; -webkit-border-top-left-radius: .5em;
+	-moz-border-radius-topright: .5em; -webkit-border-top-right-radius: .5em; }
 
 	/* ---------- SEARCH --------------------------*/
 	.search {margin-top: .75em;}

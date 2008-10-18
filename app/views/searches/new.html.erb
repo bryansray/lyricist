@@ -1,15 +1,23 @@
-<h1>New search</h1>
+<div class="span-18 body">
+	
+	<h1>New search</h1>
 
-<% form_for(@search) do |f| %>
-  <%= f.error_messages %>
+	<% form_for(@search) do |f| %>
+	  <%= f.error_messages %>
 
-  <p>
-    <%= f.label :keywords %><br />
-    <%= f.text_field :keywords %>
-  </p>
-  <p>
-    <%= f.submit "Create" %>
-  </p>
-<% end %>
+	  <p>
+	    <%= f.label :keywords %><br />
+	    <%= f.text_field :keywords %>
+	  </p>
+	  <p>
+	    <%= f.submit "Create" %>
+	  </p>
+	<% end %>
 
-<%= link_to 'Back', searches_path %>
+	<%= link_to 'Back', searches_path %>
+
+</div>
+
+<div class="span-6 last rail">
+	<p>modules here to assist in search and also promote other areas of the site, 2 or 3 blocks of content</p>
+</div>
