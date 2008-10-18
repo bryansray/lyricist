@@ -185,6 +185,10 @@ caption     { background: #eee; }
 	text-align: right;
 }
 
+.nav form.search input[type=image] {
+	padding-top: 5px;
+}
+
 /*.nav form.search .textfields { 
 	float: left;
 }
