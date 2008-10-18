@@ -2,8 +2,8 @@
 #	Application
 #############################################################
 
-set :application, "lyricst"
-set :deploy_to, "/root/lyricist"
+set :application, "lyricist"
+set :deploy_to, "/home/railsrumble/lyricist"
 
 #############################################################
 #	Settings
@@ -20,7 +20,7 @@ set :rails_env, "production"
 #	Servers
 #############################################################
 
-set :user, "root"
+set :user, "railsrumble"
 set :domain, "72.14.181.31"
 server domain, :app, :web
 role :db, domain, :primary => true
@@ -31,8 +31,7 @@ role :db, domain, :primary => true
 
 set :scm, :git
 set :branch, "master"
-set :scm_user, 'root'
-# set :scm_key, '/root/.ssh/id_rsa'
+set :scm_user, 'railsrumble'
 set :scm_passphrase, ""
 set :repository, "git@github.com:railsrumble/the-unstable-isotopes.git"
 set :deploy_via, :remote_cache
