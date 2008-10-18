@@ -9,6 +9,14 @@ class UsersController < ApplicationController
     @user = User.find_by_login params[:id]
   end
   
+  def edit
+    @user = User.find_by_login params[:id]
+    unless @user == current_user
+      notify :error, "You do not have access to do that."
+      redirect_to @user
+    end
+  end
+  
   def new
     @user = User.new
   end

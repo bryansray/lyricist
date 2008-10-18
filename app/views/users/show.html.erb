@@ -1,6 +1,29 @@
-<h1>Showing User</h1>
+<h2 class="title"><%= @user.name %>'s Profile</h2>
 
-<p><%= @user.login || @user.identity_url %></p>
+<div class="container">
+    <div class="span-9 biography append-1">
+        <div class="span-4 image">
+            <img src="/images/users/person_standard.gif" />
+        </div>
+            
+        <div class="span-5 last append-1">
+            <div class="statement">
+                <% if @user.statement %>
+                    "<%= @user.statement %>"
+                <% else %>
+                    "This user has not entered a personal statement."
+                    <% if current_user == @user %>
+                        Feel free to <%= link_to "do that here", edit_user_path(current_user) %>.
+                    <% end %>
+                <% end %>
+            </div>
+        </div>
+            
 
-<%= link_to 'Show Lyrics', user_lyrics_path(@user) %>
-<%= link_to 'New Lyric', new_user_lyric_path(@user) %>
+    </div>
+    
+    <div class="span-14 last">
+        right hand side
+    </div>
+    
+</div>

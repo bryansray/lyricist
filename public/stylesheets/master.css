@@ -8,6 +8,8 @@
 .content h2.title {
 	height: 50px;
 	margin-bottom: 20px;
+	font-weight: bold;
+	color: #666;
 	border-bottom: 1px dotted #CECECE;
 }
 
@@ -159,4 +161,18 @@
 
 .whatis p {
 	line-height: 18px;
+}
+
+/*** USERS PROFILE ***/
+.biography .image {
+	text-align: center;
+}
+
+.biography .image img {
+	border: 1px solid #cecece;
+}
+
+.biography .statement {
+	font-style: italic;
+	font-size: 11px;
 }
