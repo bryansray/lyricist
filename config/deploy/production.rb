@@ -32,6 +32,7 @@ role :db, domain, :primary => true
 set :scm, :git
 set :branch, "master"
 set :scm_user, 'rayvinly'
+# set :scm_key, '/root/.ssh/id_rsa'
 set :scm_passphrase, ""
 set :repository, "git@github.com:railsrumble/the-unstable-isotopes.git"
 set :deploy_via, :remote_cache
@@ -65,7 +66,6 @@ namespace :deploy do
     #   run "mkdir -p #{shared_path}/uploads"
     #   run "ln -s #{shared_path}/uploads #{release_path}/public/uploads"
     # end
-  
   end
     
   # Restart passenger on deploy
