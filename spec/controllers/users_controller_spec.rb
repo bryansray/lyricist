@@ -1,5 +1,53 @@
 require File.dirname(__FILE__) + '/../spec_helper'
 
+describe UsersController, "handling GET /users/bryanray" do
+  
+  before(:each) do
+    @user = mock_model(User, :to_param => 1)
+    @users = [@user]
+    
+    User.stub!(:find_by_login).and_return(@user)
+  end
+  
+  it "should be successful" do
+    get :show, :id => "bryanray"
+    response.should be_success
+  end
+  
+  it "should find the specified user" do
+    User.should_receive(:find_by_login).with('bryanray').and_return(@user)
+    get :show, :id => "bryanray"
+  end
+  
+  it "should assign the users to the associated view" do
+    get :show, :id => "bryanray"
+    assigns[:user].should == @user
+  end
+end
+
+describe UsersController, "handling GET /users" do
+  before(:each) do
+    @user = mock_model(User, :to_param => 1)
+    @users = [@user]
+    
+    User.stub!(:all).and_return(@users)
+  end
+  it "should be successful" do
+    get :index
+    response.should be_success
+  end
+  
+  it "should find a list of all the users" do
+    User.should_receive(:all).and_return @users
+    get :index
+  end
+  
+  it "should assign the users to the associated view" do
+    get :index
+    assigns[:users].should == @users
+  end
+end
+
 describe UsersController do
   fixtures :users
 
