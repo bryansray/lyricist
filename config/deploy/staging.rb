@@ -21,7 +21,7 @@ set :rails_env, "staging"
 #############################################################
 
 set :user, "root"
-set :domain, "72.14.181.31"
+set :domain, "lyricistapp.com"
 server domain, :app, :web
 role :db, domain, :primary => true
 
@@ -35,6 +35,7 @@ set :scm_user, 'rayvinly'
 set :scm_passphrase, ""
 set :repository, "git@github.com:railsrumble/the-unstable-isotopes.git"
 set :deploy_via, :remote_cache
+set :git_enable_submodules, 1
 
 #############################################################
 #	Passenger
