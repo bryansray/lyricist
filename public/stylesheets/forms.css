@@ -1,88 +1,16 @@
-/*** BIG FORM ***/
-form.bigform {
-	margin: 15px auto;
-	width: 650px;
-}
-
-form.bigform .checkboxes {
-	margin-left: 230px;
-}
-
-form.bigform .checkboxes label {
-	font-size: 15px;
-	font-weight: bold;
-	margin-left: 10px;
-}
-form.bigform .textfields div, form.bigform .checkboxes div, form.basic .textfields div {
-	clear: both;
-	margin: 4px 0;
-	position: relative;
-}
-
-form.bigform .textfields label {
-  display: block;
-  float: left;
-  width: 230px;
-  font-size: 17px;
-  font-weight: bold;
-  line-height: 27px; 
-}
-
-form.bigform .textfields input, form.bigform .textfields textarea {
-  display: block;
-  float: left;
-  width: 390px;
-  padding: 4px;
-  font-size: 14px; 
-}
+/*** FORMS ***/
+form.bigform { margin: 15px auto; width: 650px; }
+form.bigform .checkboxes { margin-left: 230px; }
+form.bigform .checkboxes label { font-size: 15px; font-weight: bold; margin-left: 10px; }
+form.bigform .textfields div, form.bigform .checkboxes div, form.basic .textfields div { clear: both; margin: 4px 0; position: relative; }
+form.bigform .textfields label { display: block; float: left; width: 230px; font-size: 17px; font-weight: bold; line-height: 27px; }
+form.bigform .textfields input, form.bigform .textfields textarea { display: block; float: left; width: 390px; padding: 4px; font-size: 14px; }
 
 /*** HOME LOGIN FORM ***/
-.main .login {
-	border: 1px solid #d0e7d1;
-	color: #3d9655;
-	background-color: #EBF7D9;
-	margin: 10px auto;
-	padding: 5px;
-	width: 282px;
-	-moz-border-radius: 4px;
-	-webkit-border-radius: 4px;
-}
-
-.main .login form .buttons {
-	margin-top: 1em;
-	text-align: left;
-}
-
-.main .login h3 {
-	color: darkBlue;
-	border-bottom: 1px solid lightBlue;
-}
-
-.main .login form label { 
-	float: left;
-	width: 100px;
-	font-size: 13px;
-	font-weight: bold;
-}
-
-.main .login form input {
-	float: right;
-	padding: 2px;
-	width: 132px;
-}
-
-form .buttons {
-	text-align: right;
-	margin-top: 2em;
-}
-
-button.green, .button.green, input.green {
-  color: #2D5000 !important;
-  background: url('/images/common/grad.gif') repeat-x center !important;
-  border: 1px solid #96bf6c;
-  padding: 4px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 14px;
-  font-weight: bold;
-  text-decoration: none; 
-}
+.main .login { border: 1px solid #d0e7d1; color: #3d9655; background-color: #EBF7D9; margin: 10px auto;	padding: 5px; width: 282px;	-moz-border-radius: 4px; -webkit-border-radius: 4px; }
+.main .login form .buttons { margin-top: 1em; text-align: left; }
+.main .login h3 { color: darkBlue; border-bottom: 1px solid lightBlue; }
+.main .login form label { float: left; width: 100px; font-size: 13px; font-weight: bold; }
+.main .login form input { float: right;	padding: 2px; width: 132px; }
+form .buttons {	text-align: right;	margin-top: 2em; }
+button.green, .button.green, input.green { color: #2D5000; background: url('/images/common/grad.gif') repeat-x center; border: 1px solid #96bf6c; padding: 4px; font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: bold; text-decoration: none; }
