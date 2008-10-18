@@ -1,35 +1,37 @@
-<div class="span-10 append-7 prepend-7">
-<h1>Login</h1>
-<% form_tag session_path do %>
-	<fieldset>
-		<legend>Your Details</legend>
-		<ul>
-			<li>
-				<%= label_tag 'login', 'Username' %>
-				<%= text_field_tag 'login', @login %>
-			</li>
-			<li>
-				<%= label_tag 'password' %>
-				<%= password_field_tag 'password', nil %>
-			</li>
-			<li>
-				<%= label_tag 'remember_me', 'Remember me' %>
-				<%= check_box_tag 'remember_me', '1', @remember_me %>
-			</li>
-		</ul>
-	</fieldset>
-	<fieldset>
-		<legend>Login with OpenID</legend>
-		<ol>
-			<li>
-				<%= label_tag 'openid_url', 'OpenID URL' %>
-				<%= text_field_tag 'openid_url' %>
-			</li>
-		</ol>
-	</fieldset>
-	<div class="buttons">
-		<%= submit_tag 'Login' %>
-		<%= link_to 'Forgotten Password', forgot_password_path %>
+<h2 class="title">Log In to your Lyricist Account</h2>
+
+<% form_tag session_path, :class => "bigform" do %>
+    <div class="textfields">
+        <div class="clearfix">
+    		<%= label_tag 'login', 'Username' %>
+    		<%= text_field_tag 'login', @login %>
+		</div>
+	    
+	    <div class="clearfix">
+			<%= label_tag 'password' %>
+			<%= password_field_tag 'password', nil %>	        
+	    </div>
+    </div>
+    
+    <div class="checkboxes">
+        <div class="clearfix">
+			<%= check_box_tag 'remember_me', '1', @remember_me %>
+			<%= label_tag 'remember_me', 'Remember Me' %>
+        </div>
+    </div>
+    
+    <h2>or use your OpenID Account ...</h2>
+    
+    
+	<div class="textfields">
+	    <div class="clearfix">
+			<%= label_tag 'openid_url', 'OpenID URL' %>
+			<%= text_field_tag 'openid_url' %>	        
+	    </div>
+	</div>
+
+	<div class="buttons clearfix">
+		<%= submit_tag 'Login', :class => "green", :style => "width: 150px" %>
+	    <%= link_to 'Forgotten Password', forgot_password_path %>
 	</div>
 <% end -%>
-</div>

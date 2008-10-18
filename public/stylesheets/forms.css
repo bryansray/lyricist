@@ -3,7 +3,16 @@ form.bigform {
 	width: 650px;
 }
 
-form.bigform .textfields div {
+form.bigform .checkboxes {
+	margin-left: 230px;
+}
+
+form.bigform .checkboxes label {
+	font-size: 15px;
+	font-weight: bold;
+	margin-left: 10px;
+}
+form.bigform .textfields div, form.bigform .checkboxes div {
 	clear: both;
 	margin: 4px 0;
 	position: relative;

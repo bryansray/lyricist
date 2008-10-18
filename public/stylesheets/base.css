@@ -7,7 +7,7 @@ body {
 	color: #222; 
 	background: #fff;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	margin: 1.5em 0 0 0;
+	margin: 0;
 }
 
 /*.container { 
@@ -276,7 +276,12 @@ textarea {
 
 
 /* ---------- HEADER --------------------------*/
-.header { border-bottom: 5px solid #e1e1e1; margin-bottom: 1em; }
+.header { 
+	border-top: 4px solid #65aef3; 
+	border-bottom: 7px solid #65AEF3; 
+	height: 80px;
+	background-color: #2E383E;
+}
 .header p.brand { font-weight: bold; text-transform: uppercase ; font-size: 3em; margin-bottom: 0; }
 .header p.brand span { font-size: .7em; color: #666; text-transform: lowercase; font-style: normal; } 
 .header p.tagline { padding-top: 1em; font-size: 1.5em; text-transform: lowercase;}
@@ -288,5 +293,13 @@ textarea {
 .body img { margin: 0 0 1em 0;}
 
 /* ---------- FOOTER --------------------------*/
-.footer { background-color: #f1f1f1;}
+.footer { 
+	background-color: #f1f1f1;
+	border-top: 2px solid #c4e3ff;
+	clear: both;
+	color: #7e89a2;
+	font-size: 12px;
+	min-height: 100px;
+	padding-top: 20px;
+}
 
