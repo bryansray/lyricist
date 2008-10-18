@@ -1,7 +1,15 @@
 <div class="users">
     <% @users.each do |user| %>
-        <div class="user" id="<%= user.id %>">
-            <%= user.name %>
+        <div class="user preview" id="user-<%= user.id %>">
+            <img src="/images/users/person_thumb.gif" />
+
+            <div class="span-4 last">
+                <h3><%= link_to user.name, user_path(user) %></h3>
+                
+                <div class="statistics">
+                    <p>Lyrics: <%= user.lyrics.size %></p>
+                </div>
+            </div>
         </div>
     <% end %>
 </div>
