@@ -1,8 +1,10 @@
 class LyricsController < ApplicationController
-
+  before_filter :login_required, :only => [:new, :edit, :create, :update, :destroy]
+  
   # GET /lyrics
   # GET /lyrics.xml
   def index
+    @user = current_user
     @lyrics = Lyric.find(:all)
 
     respond_to do |format|
