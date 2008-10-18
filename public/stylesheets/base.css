@@ -115,12 +115,20 @@ caption     { background: #eee; }
 .notice a   { color: #514721; }
 .success a  { color: #264409; }
 
+/*** FLASH MESSAGES ***/
+#flash_message {margin: 0 0 1em;}
+#flash_messages .alert { font-size: 14px; border: 1px solid; background: no-repeat 8px 50%;	margin-bottom: 10px; }
+#flash_messages .alert p { margin: 10px; font-weight: bold;	padding-left: 32px; }
+#flash_messages .info {	background-image: url('/images/common/info.png'); background-color: #e0f0ff; border-color: #c4e3ff; }
+#flash_messages .notice { background-image: url('/images/common/info.png');	background-color: #e0f0ff;	border-color: #c4e3ff; }
+#flash_messages .error { background-image: url('/images/common/error.png');	background-color: #ffccbf;	border-color: #b32400; }
+
 
 /* ---------- HEADER --------------------------*/
 .header { 
 	background-color:#041121;
-	border-bottom: 7px solid #65AEF3;
-	border-bottom:4px solid #F59A09;
+/*	border-bottom: 7px solid #65AEF3;
+	border-bottom:4px solid #F59A09;*/
 }
 
 .header p{ margin-bottom: 0;}
@@ -146,8 +154,21 @@ caption     { background: #eee; }
 
 	.header ul.dashboard li a:hover { color: #fff; background-color:#0c3b71; }
 
+/* ---------- NAVIGATION --------------------------*/
+.nav {
+	background-color: #65AEF3;
+	-moz-border-radius-topleft: 1em; -webkit-border-top-left-radius: 1em;
+	-moz-border-radius-topright: 1em; -webkit-border-top-right-radius: 1em;
+}
+
+.nav .sf-menu {
+	margin: .2em 0;
+}
+	
 /* ---------- CONTENT --------------------------*/
-.content { background-color: #fff; min-height: 300px; -moz-border-radius: 1em;	-webkit-border-radius: 1em;}
+div.content { background-color: #fff; min-height: 300px; padding-top: 1em; padding-bottom: 5em;}
+
+.content h1 { margin-bottom: 20px; font-weight: bold; color: #666; border-bottom: 1px dotted #CECECE; }
 
 	/* ---------- INDEX - LEAD --------------------------*/
 	.lead {
@@ -170,15 +191,13 @@ caption     { background: #eee; }
 .body img { margin: 0 0 1em 0;}
 
 /* ---------- FOOTER --------------------------*/
-.footer { 
+div.footer { 
 	background-color: #f1f1f1;
-	border-top: 2px solid #2E383E;
-	margin-top: 1em;
-	clear: both;
 	color: #7e89a2;
-	font-size: 12px;
-	min-height: 100px;
-	padding-top: 20px;
+	margin-bottom: 5em;
+	padding-top: 2em;
+	-moz-border-radius-bottomleft: 1em; -webkit-border-bottom-left-radius: 1em;
+	-moz-border-radius-bottomright: 1em; -webkit-border-bottom-right-radius: 1em;
 }
 
 .footer ul {
