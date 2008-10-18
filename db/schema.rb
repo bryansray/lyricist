@@ -24,6 +24,8 @@ ActiveRecord::Schema.define(:version => 20081018004635) do
   end
 
   create_table "lyrics", :force => true do |t|
+    t.integer  "song_id"
+    t.integer  "user_id"
     t.text     "text"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -72,6 +74,8 @@ ActiveRecord::Schema.define(:version => 20081018004635) do
   add_index "sessions", ["updated_at"], :name => "index_sessions_on_updated_at"
 
   create_table "songs", :force => true do |t|
+    t.integer  "artist_id"
+    t.integer  "album_id"
     t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"

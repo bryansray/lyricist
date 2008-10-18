@@ -9,11 +9,18 @@ describe Lyric do
     lyric.should be_valid
   end
   
-  it "should belong to a specific user" do
+  it "should have an owner who created the lyrics" do
     user = User.generate
     lyric = Lyric.generate
     lyric.owner = user
     lyric.owner.should == user
+  end
+  
+  it "should belong to a specific song" do
+    song = Song.generate
+    lyric = Lyric.generate
+    lyric.song = song
+    lyric.song.should == song
   end
   
   it "should not be a valid lyric if there is no text" do
