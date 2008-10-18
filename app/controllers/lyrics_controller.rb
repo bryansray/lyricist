@@ -1,10 +1,9 @@
 class LyricsController < ApplicationController
   before_filter :login_required, :only => [:new, :edit, :create, :update, :destroy]
-  
+
   # GET /lyrics
   # GET /lyrics.xml
   def index
-    @user = current_user
     @lyrics = Lyric.find(:all)
 
     respond_to do |format|
@@ -44,6 +43,7 @@ class LyricsController < ApplicationController
   # POST /lyrics.xml
   def create
     @lyric = Lyric.new(params[:lyric])
+    @lyric.owner = current_user
 
     respond_to do |format|
       if @lyric.save
@@ -85,4 +85,5 @@ class LyricsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
 end

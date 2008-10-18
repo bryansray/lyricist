@@ -31,7 +31,7 @@ role :db, domain, :primary => true
 
 set :scm, :git
 set :branch, "master"
-set :scm_user, 'railsrumble'
+set :scm_user, 'root'
 # set :scm_key, '/root/.ssh/id_rsa'
 set :scm_passphrase, ""
 set :repository, "git@github.com:railsrumble/the-unstable-isotopes.git"
