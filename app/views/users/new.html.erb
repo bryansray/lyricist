@@ -7,7 +7,7 @@
 <% form_for @user, :html => { :class => "bigform" } do |f| %>
 	<%= f.error_messages %>
 	
-	<div class="textfields">
+	<div class="span-12 textfields">
 	    <div class="clearfix">
 			<%= f.label :login, 'Username' %>
 			<%= f.text_field :login %>	        
@@ -34,10 +34,9 @@
         </div>
 	</div>
 	
-	<h2>or ... signup with <strong>OpenID</strong>!!</h2>
-	
-	<div class="textfields">
-	    <div class="clearfix">
+	<div class="span-12 last textfields">
+	    	<h2>or ... signup with <strong>OpenID</strong>!!</h2>
+		<div class="clearfix">
 			<label for="openid_url">OpenID URL</label>
 			<%= text_field_tag :openid_url, params[:openid_url] || params['openid.identity'] %>	        
 	    </div>

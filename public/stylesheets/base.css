@@ -128,6 +128,7 @@ caption     { background: #eee; }
 /* ---------- HEADER --------------------------*/
 .header { 
 	background-color:#041121;
+	margin-top: .5em; margin-bottom: 1em;
 }
 
 .header p{ margin-bottom: 0;}
@@ -136,8 +137,8 @@ caption     { background: #eee; }
 .header p.tagline { padding-top: 1em; font-size: 1.5em; color: orange; text-transform: lowercase;}
 
 	/* ---------- DASHBOARD --------------------------*/
-	.header ul.dashboard { margin-bottom:0; display: inline; }
-	.header ul.dashboard li { float: left; display: block; height: 20px; line-height: 20px; margin: 1em 2px 0; cursor: pointer; list-style: none; }
+	.header ul.dashboard { margin-bottom:0; margin-left: 0; display: inline; }
+	.header ul.dashboard li { float: right; display: block; height: 20px; line-height: 20px; margin: 1.75em 2px 0; cursor: pointer; list-style: none; }
 
 	.header ul.dashboard li a {
 		padding: 0;
@@ -175,7 +176,7 @@ caption     { background: #eee; }
 	.search {margin-top: .75em; float: right;}
 	
 /* ---------- CONTENT --------------------------*/
-div.content { background-color: #fff; min-height: 300px; padding-top: 1em; padding-bottom: 5em;}
+div.content { background-color: #fff; min-height: 300px; padding-top: 2em; padding-bottom: 5em;}
 
 .content h1 { padding-bottom: 10px; font-weight: bold; color: #666; border-bottom: 1px dotted #CECECE; }
 
