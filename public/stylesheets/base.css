@@ -168,7 +168,7 @@ caption     { background: #eee; }
 	.nav ul li { margin: 0 .25em 0 0; padding: .5em .25em 0 .25em; list-style-type: none; float: left; font-weight: bold; text-transform: uppercase; }
 	.nav ul li a { display: block; color: #fff; }
 	
-	.nav ul { /*width: 980px; margin: 0 auto;*/ margin: 0; }
+	.nav ul { /*width: 980px; margin: 0 auto;*/ margin: 0; font-size: 11pt; }
 	.nav ul li.current { }
 	.nav ul li a { padding: .25em .5em 0.5em .5em; text-decoration: none; }
 	.nav ul li.current a, div#nav ul li.current a:hover { color: #0a396f; background-color: #fff; -moz-border-radius-topleft: .5em; -webkit-border-top-left-radius: .5em;
@@ -179,7 +179,6 @@ caption     { background: #eee; }
 /* ---------- SEARCH --------------------------*/
 .nav form.search {
 	margin-right: 1em;
-	margin-top: .5em;
 	float: right;
 }
 
