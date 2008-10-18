@@ -51,7 +51,9 @@ describe LyricsController do
   end
 
   describe "responding to GET new" do
-  
+    before(:each) do
+      controller.stub!(:current_user).and_return(mock_user)
+    end
     it "should expose a new lyric as @lyric" do
       Lyric.should_receive(:new).and_return(mock_lyric)
       get :new
@@ -61,7 +63,10 @@ describe LyricsController do
   end
 
   describe "responding to GET edit" do
-  
+    before(:each) do
+      controller.stub!(:current_user).and_return(mock_user)
+    end
+    
     it "should expose the requested lyric as @lyric" do
       Lyric.should_receive(:find).with("37").and_return(mock_lyric)
       get :edit, :id => "37"
@@ -71,7 +76,10 @@ describe LyricsController do
   end
 
   describe "responding to POST create" do
-
+    before(:each) do
+      controller.stub!(:current_user).and_return(mock_user)
+    end
+    
     describe "with valid params" do
       
       it "should expose a newly created lyric as @lyric" do
@@ -107,7 +115,10 @@ describe LyricsController do
   end
 
   describe "responding to PUT udpate" do
-
+    before(:each) do
+      controller.stub!(:current_user).and_return(mock_user)
+    end
+    
     describe "with valid params" do
 
       it "should update the requested lyric" do
@@ -155,7 +166,10 @@ describe LyricsController do
   end
 
   describe "responding to DELETE destroy" do
-
+    before(:each) do
+      controller.stub!(:current_user).and_return(mock_user)
+    end
+    
     it "should destroy the requested lyric" do
       Lyric.should_receive(:find).with("37").and_return(mock_lyric)
       mock_lyric.should_receive(:destroy)
