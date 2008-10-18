@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   skip_before_filter :verify_authenticity_token, :only => :create
   
   def index
-    @users = User.all
+    @users = User.find :all, :conditions => ["state = 'active'"]
   end
   
   def show

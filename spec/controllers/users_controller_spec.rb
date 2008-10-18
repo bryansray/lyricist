@@ -30,15 +30,16 @@ describe UsersController, "handling GET /users" do
     @user = mock_model(User, :to_param => 1)
     @users = [@user]
     
-    User.stub!(:all).and_return(@users)
+    User.stub!(:find).with(:all, :conditions => ["state = 'active'"]).and_return(@users)
   end
+  
   it "should be successful" do
     get :index
     response.should be_success
   end
   
-  it "should find a list of all the users" do
-    User.should_receive(:all).and_return @users
+  it "should find a list of all the active users" do
+    User.should_receive(:find).with(:all, :conditions => ["state = 'active'"]).and_return @users
     get :index
   end
   
