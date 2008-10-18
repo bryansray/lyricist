@@ -1,4 +1,6 @@
 class LyricsController < ApplicationController
+  before_filter :find_user
+  
   # GET /lyrics
   # GET /lyrics.xml
   def index
@@ -24,7 +26,7 @@ class LyricsController < ApplicationController
   # GET /lyrics/new
   # GET /lyrics/new.xml
   def new
-    @lyric = Lyric.new
+    @lyric = @user.lyrics.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -40,12 +42,12 @@ class LyricsController < ApplicationController
   # POST /lyrics
   # POST /lyrics.xml
   def create
-    @lyric = Lyric.new(params[:lyric])
+    @lyric = @user.lyrics.new(params[:lyric])
 
     respond_to do |format|
       if @lyric.save
         flash[:notice] = 'Lyric was successfully created.'
-        format.html { redirect_to(@lyric) }
+        format.html { redirect_to [@user, @lyric] }
         format.xml  { render :xml => @lyric, :status => :created, :location => @lyric }
       else
         format.html { render :action => "new" }
@@ -81,5 +83,11 @@ class LyricsController < ApplicationController
       format.html { redirect_to(lyrics_url) }
       format.xml  { head :ok }
     end
+  end
+  
+  protected
+  
+  def find_user
+    @user = User.find(params[:user_id])
   end
 end
