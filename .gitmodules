@@ -1,3 +1,6 @@
 [submodule "vendor/plugins/object_daddy"]
 	path = vendor/plugins/object_daddy
 	url = git://github.com/flogic/object_daddy.git
+[submodule "vendor/plugins/acts_as_fulltextable"]
+	path = vendor/plugins/acts_as_fulltextable
+	url = git://github.com/wonsys/acts_as_fulltextable.git
