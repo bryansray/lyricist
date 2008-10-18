@@ -1,5 +1,6 @@
 <h1>Showing User</h1>
 
-<%= @user.login || @user.identity_url %>
+<p><%= @user.login || @user.identity_url %></p>
 
+<%= link_to 'Show Lyrics', user_lyrics_path(@user) %>
 <%= link_to 'New Lyric', new_user_lyric_path(@user) %>
