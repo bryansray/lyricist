@@ -10,7 +10,7 @@
 		<meta name="resource-type" content="document" />
 		<meta name="MSSmartTagsPreventParsing" content="true" />
 		<%= stylesheet_link_tag 'screen' %>
-		<%= stylesheet_link_tag 'base' %>
+		<%= stylesheet_link_tag 'base', 'master', 'forms' %>
         
         <!--[if IE]>
           <link rel="stylesheet" href="<%= stylesheet_link_tag 'ie' %>" type="text/css" media="screen, projection">
@@ -35,7 +35,14 @@
 				</ul>
 			</div>
 			<div class="span-24 content">
-				<%= flash_messages %>
+				<div id="flash_messages">
+				    <% flash.each do |key, value| %>
+				        <div id="flash_message" class="alert <%= key %>">
+				            <p><%= value %></p>
+				        </div>
+				    <% end %>
+				</div>
+				
 				<%= yield :layout %>
 			</div>
 			

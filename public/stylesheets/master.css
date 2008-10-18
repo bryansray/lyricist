@@ -1,0 +1,36 @@
+#container > .content {
+	padding: 15px;
+}
+
+/*** FLASH MESSAGES ***/
+
+#flash_messages .alert {
+	font-size: 14px;
+	border: 1px solid;
+	background: no-repeat 8px 50%;
+	margin-bottom: 10px;
+}
+
+#flash_messages .alert p {
+	margin: 10px;
+	font-weight: bold;
+	padding-left: 32px;
+}
+
+#flash_messages .info {
+	background-image: url('/images/common/info.png');
+	background-color: #e0f0ff;
+	border-color: #c4e3ff;
+}
+
+#flash_messages .notice {
+	background-image: url('/images/common/info.png');
+	background-color: #e0f0ff;
+	border-color: #c4e3ff;
+}
+
+#flash_messages .error {
+	background-image: url('/images/common/error.png');
+	background-color: #ffccbf;
+	border-color: #b32400;
+}

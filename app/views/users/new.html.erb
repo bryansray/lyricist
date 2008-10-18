@@ -1,40 +1,49 @@
-<div class="span-10 append-7 prepend-7">
+
 <% @user.password = @user.password_confirmation = nil %>
-<h1>Signup</h1>
-<% form_for @user do |f| %>
+
+<p>Creating a Lyricist account is simple and will allow you to start creating, editing, and commenting on the site. Take a minute to join the community!</p>
+
+
+<% form_for @user, :html => { :class => "bigform" } do |f| %>
 	<%= f.error_messages %>
-	<fieldset>
-		<legend>Your Details</legend>
-		<ul>
-			<li>
-				<%= f.label :login, 'Username' %>
-				<%= f.text_field :login %>
-			</li>
-			<li>
-				<%= f.label :email %>
-				<%= f.text_field :email %>
-			</li>
-			<li>
-				<%= f.label :password %>
-				<%= f.password_field :password %>
-			</li>
-			<li>
-				<%= f.label :password_confirmation, 'Confirm Password' %>
-				<%= f.password_field :password_confirmation %>
-			</li>
-		</ul>
-	</fieldset>
-	<fieldset>
-		<legend>Signup with OpenID</legend>
-		<ol>
-			<li>
-				<label for="openid_url">OpenID URL</label>
-				<%= text_field_tag :openid_url, params[:openid_url] || params['openid.identity'] %>
-			</li>
-		</ol>
-	</fieldset>
-	<div class="buttons">
-		<%= submit_tag 'Sign up' %>
+	
+	<div class="textfields">
+	    <div class="clearfix">
+			<%= f.label :login, 'Username' %>
+			<%= f.text_field :login %>	        
+	    </div>
+	    
+	    <div class="clearfix">
+			<%= f.label :email %>
+			<%= f.text_field :email %>
+	    </div>
+	    
+	    <div class="clearfix">
+		    <%= f.label :name %>
+		    <%= f.text_field :name %>	        
+	    </div>
+	    
+	    <div class="clearfix">
+	       	<%= f.label :password %>
+			<%= f.password_field :password %>
+	    </div>
+	    
+        <div class="clearfix">
+			<%= f.label :password_confirmation, 'Confirm Password' %>
+			<%= f.password_field :password_confirmation %>
+        </div>
+	</div>
+	
+	<h2>or ... signup with <strong>OpenID</strong>!!</h2>
+	
+	<div class="textfields">
+	    <div class="clearfix">
+			<label for="openid_url">OpenID URL</label>
+			<%= text_field_tag :openid_url, params[:openid_url] || params['openid.identity'] %>	        
+	    </div>
+	</div>
+
+	<div class="buttons clearfix">
+		<%= submit_tag 'Sign up', :class => "green", :style => "width: 150px" %>
 	</div>
 <% end %>
-</div>

@@ -4,9 +4,15 @@ class ApplicationController < ActionController::Base
   include RoleRequirementSystem
 
   helper :all # include all helpers, all the time
+  
   protect_from_forgery :secret => 'b0a876313f3f9195e9bd01473bc5cd06'
   filter_parameter_logging :password, :password_confirmation
   rescue_from ActiveRecord::RecordNotFound, :with => :record_not_found
+  
+  def notify(type, message)
+    flash[type] = message
+    logger.error("ERROR: #{message}") if type == :error
+  end
   
   protected
   

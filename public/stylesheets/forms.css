@@ -1,0 +1,43 @@
+form.bigform {
+	margin: 15px auto;
+	width: 650px;
+}
+
+form.bigform .textfields div {
+	clear: both;
+	margin: 4px 0;
+	position: relative;
+}
+
+form.bigform .textfields label {
+  display: block;
+  float: left;
+  width: 230px;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 27px; 
+}
+
+form.bigform .textfields input, form.bigform .textfields textarea {
+  display: block;
+  float: left;
+  width: 390px;
+  padding: 4px;
+  font-size: 14px; 
+}
+
+form .buttons {
+	margin-top: 2em;
+}
+
+button.green, .button.green, input.green {
+  color: #2D5000 !important;
+  background: url('/images/common/grad.gif') repeat-x center !important;
+  border: 1px solid #96bf6c;
+  padding: 4px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none; 
+	float: right;
+}
