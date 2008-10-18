@@ -12,6 +12,7 @@ ActionController::Routing::Routes.draw do |map|
   
   # Restful Authentication Resources
   map.resources :users, :has_many => :lyrics
+  map.resources :lyrics
   map.resources :passwords
   map.resource :session
   
