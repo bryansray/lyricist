@@ -1,0 +1,5 @@
+<h1>Showing User</h1>
+
+<%= @user.login || @user.identity_url %>
+
+<%= link_to 'New Lyric', new_user_lyric_path(@user) %>
