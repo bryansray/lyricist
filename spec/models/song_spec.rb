@@ -15,4 +15,16 @@ describe Song do
     song.lyrics << lyric
     song.should have(1).lyrics
   end
+  
+  it "should belong to a specific album" do
+    album = Album.generate
+    song = Song.generate :album => album
+    song.album.should == album
+  end
+  
+  it "should belong to a specific artist" do
+    artist = Artist.generate
+    song = Song.generate :artist => artist
+    song.artist.should == artist
+  end
 end
