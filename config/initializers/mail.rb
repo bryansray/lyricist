@@ -6,5 +6,5 @@ ActionMailer::Base.smtp_settings = {
   :domain => 'lyricistapp.com',
   :authentication => :plain,
   :user_name => 'mailer@lyricistapp.com',
-  :password => '9468C6'
+  :password => 'lyricistftw'
 }
