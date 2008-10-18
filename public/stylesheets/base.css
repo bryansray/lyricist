@@ -1,3 +1,5 @@
+.span-24, div.span-24 { width: 970px; padding: 0 10px;}
+
 /* Typography
 -------------------------------------------------------------- */
 
@@ -5,14 +7,10 @@
 body { 
 	font-size: 75%;
 	color: #222; 
-	background: #fff;
-	font-family: "Trebuchet MS", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	background-color: #041121;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	margin: 0;
 }
-
-/*.container { 
-  background: #fff;
-}*/
 
 /* Headings
 -------------------------------------------------------------- */
@@ -120,16 +118,18 @@ caption     { background: #eee; }
 
 /* ---------- HEADER --------------------------*/
 .header { 
-	border-top: 4px solid #65aef3; 
+	background-color:#041121;
 	border-bottom: 7px solid #65AEF3;
-	border-bottom:4px solid #F59A09;}
+	border-bottom:4px solid #F59A09;
+}
 
-.header p.brand { font-weight: bold; text-transform: uppercase ; font-size: 3em; margin-bottom: 0; }
-.header p.brand span { font-size: .7em; color: #666; text-transform: lowercase; font-style: normal; } 
-.header p.tagline { padding-top: 1em; font-size: 1.5em; text-transform: lowercase;}
+.header p{ margin-bottom: 0;}
+.header p.brand a{ font-weight: bold; text-transform: uppercase ; font-size: 3em; text-decoration: none; color:#fff; }
+.header p.brand span { font-size: .5em; color: lightblue; text-transform: lowercase; font-style: normal; } 
+.header p.tagline { padding-top: 1em; font-size: 1.5em; color: orange; text-transform: lowercase;}
 
 	/* ---------- Navigation--------------------------*/
-	.header ul.dashboard { height: 63px; display: inline; }
+	.header ul.dashboard { margin-bottom:0; display: inline; }
 	.header ul.dashboard li { float: left; display: block; height: 20px; line-height: 20px; margin: 1em 2px 0; cursor: pointer; list-style: none; }
 
 	.header ul.dashboard li a {
@@ -144,9 +144,10 @@ caption     { background: #eee; }
 	  line-height: 20px;
 	 	text-decoration: none;}
 
-	.header ul.dashboard li a:hover { color: #fff; background-color:#65AEF3; }
+	.header ul.dashboard li a:hover { color: #fff; background-color:#0c3b71; }
 
-/* ---------- BODY --------------------------*/
+/* ---------- CONTENT --------------------------*/
+.content { background-color: #fff; min-height: 300px; -moz-border-radius: 1em;	-webkit-border-radius: 1em;}
 
 	/* ---------- INDEX - LEAD --------------------------*/
 	.lead {
@@ -156,6 +157,7 @@ caption     { background: #eee; }
 		border: 3px solid #cecece;
 		padding: 1em;
 		background-color: #efefef;
+		margin-top: 1em;
 	}
 
 	.lead h1 { color: #4E5963; }

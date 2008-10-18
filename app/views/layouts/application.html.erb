@@ -24,7 +24,7 @@
 		
 		<div id="container" class="container">
 			<div class="span-24 header">
-			    <p class="span-7 brand">Lyricist<span>app</span></p>
+			    <p class="span-7 brand"><%= link_to "Lyricist<span>app</span>", root_path %></p>
 			    <p class="span-11 tagline">you know the song, but what are the lyrics?</p>
     			
 
@@ -40,57 +40,57 @@
 
 			</div>
 		
-		<div class="span-24 menu">
-		    <ul class="sf-menu">
-		        <li><%= link_to "Home", root_path %></li>
+			<div class="span-24 menu">
+			    <ul class="sf-menu">
+			        <li><%= link_to "Home", root_path %></li>
 		        
-		        <li>
-		            <a href="/">Community</a>
-		            <ul><li><%= link_to "Members", users_path %></li></ul>
-		        </li>
+			        <li>
+			            <a href="/">Community</a>
+			            <ul><li><%= link_to "Members", users_path %></li></ul>
+			        </li>
 		        
-		        <li>
-		            <%= link_to "Lyrics", lyrics_path %>
+			        <li>
+			            <%= link_to "Lyrics", lyrics_path %>
 		            
-		            <% if logged_in? %>
-		                <ul>
-		                    <li><%= link_to "Create New", new_lyric_path %></li>
-		                </ul>
-		            <% end %>
-		        </li>
+			            <% if logged_in? %>
+			                <ul>
+			                    <li><%= link_to "Create New", new_lyric_path %></li>
+			                </ul>
+			            <% end %>
+			        </li>
 		        
-		        <li>
-		            <a href="/">Search</a>
-		        </li>
-		    </ul>
-		</div>
-
-
-		<div class="span-24 content">
-		    <% unless flash.empty? %>
-			<div id="flash_messages">
-			    <% flash.each do |key, value| %>
-			        <div id="flash_message" class="alert <%= key %>">
-			            <p><%= value %></p>
-			        </div>
-			    <% end %>
+			        <li>
+			            <a href="/">Search</a>
+			        </li>
+			    </ul>
 			</div>
-			<% end %>
-			<%= yield :layout %>
-		</div>
 
-		<div class="span-24 footer">
-			<ul class="span-6">
-			    <li><%= link_to "Home", root_path %></li>
-			    <li>Help & FAQs</li>
-			    <li>About</li>
-			</ul>
 
-			<p class="span-17 last copyright">
-			    Powered by: <a href="http://rubyonrails.org" target="_new">Rails</a>, <a href="http://jquery.com" target="_new">jQuery</a>, <a href="http://railsrumble.com" target="_new">Rumble</a>, <a href="http://linode.com" target="_new">linode</a>, <a href="http://github.com" target="_new">github</a>, <a href="http://www.monsterenergy.com/" target="_new">Monster</a>, <a href="http://mountaindew.com" target="_new">Mountain Dew</a>, and <a href="http://www.littledebbie.com/products/SwissCake.asp" target="_new">Swiss Cake Rolls</a>!
-			</p>
+			<div class="span-24 content">
+			    <% unless flash.empty? %>
+				<div id="flash_messages">
+				    <% flash.each do |key, value| %>
+				        <div id="flash_message" class="alert <%= key %>">
+				            <p><%= value %></p>
+				        </div>
+				    <% end %>
+				</div>
+				<% end %>
+				<%= yield :layout %>
+			</div>
+
+			<div class="span-24 footer">
+				<ul class="span-6">
+				    <li><%= link_to "Home", root_path %></li>
+				    <li>Help &amp; FAQs</li>
+				    <li>About</li>
+				</ul>
+
+				<p class="span-17 last copyright">
+				    Powered by: <a href="http://rubyonrails.org" target="_new">Rails</a>, <a href="http://jquery.com" target="_new">jQuery</a>, <a href="http://railsrumble.com" target="_new">Rumble</a>, <a href="http://linode.com" target="_new">linode</a>, <a href="http://github.com" target="_new">github</a>, <a href="http://www.monsterenergy.com/" target="_new">Monster</a>, <a href="http://mountaindew.com" target="_new">Mountain Dew</a>, and <a href="http://www.littledebbie.com/products/SwissCake.asp" target="_new">Swiss Cake Rolls</a>!
+				</p>
+			</div>
 		</div>
-	</div>
 
 	</body>
 </html>
