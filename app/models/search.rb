@@ -8,8 +8,8 @@ class Search < ActiveRecord::Base
       keywords.split.each do |keyword|
         results[:artists] += Artist.find(:all, :conditions => [ "title LIKE ?", "%#{keyword}%" ])
         results[:songs]   += Song.find(:all, :conditions => [ "title LIKE ?", "%#{keyword}%" ])
-        results[:lyrics]  += Lyric.find(:all, :conditions => [ "text LIKE ?", "%#{keyword}%"])
       end
+      results[:lyrics] += Lyric.find_fulltext keywords
       results.values.map(&:uniq!)
     end
   end

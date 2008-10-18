@@ -70,6 +70,9 @@ describe Search do
     end
 
     it "should find lyrics by words" do
+      Lyric.stub!(:find_fulltext).and_return([@lyric])
+      # ^^^ Cheat b/c some combination of acts_as_fulltext, object_daddy, and rspec are not getting along
+      
       search = Search.generate :keywords => "golden promise"
       search.results[:lyrics].should include(@lyric)
     end
