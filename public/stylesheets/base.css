@@ -3,15 +3,16 @@
 
 /* Default font settings. The font-size percentage is of 16px. (0.75 * 16px = 12px) */
 body { 
-  font-size: 75%;
-  color: #222; 
-  background: #fff;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 75%;
+	color: #222; 
+	background: #fff;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	margin: 1.5em 0 0 0;
 }
 
-.container { 
+/*.container { 
   background: #fff;
-}
+}*/
 
 /* Headings
 -------------------------------------------------------------- */
@@ -276,7 +277,7 @@ textarea {
 
 /* ---------- HEADER --------------------------*/
 .header { border-bottom: 5px solid #e1e1e1; margin-bottom: 1em; }
-.header p.brand { font-weight: bold; text-transform: uppercase ; font-size: 3em; margin: 0; }
+.header p.brand { font-weight: bold; text-transform: uppercase ; font-size: 3em; margin-bottom: 0; }
 .header p.brand span { font-size: .7em; color: #666; text-transform: lowercase; font-style: normal; } 
 .header p.tagline { padding-top: 1em; font-size: 1.5em; text-transform: lowercase;}
 
@@ -287,5 +288,5 @@ textarea {
 .body img { margin: 0 0 1em 0;}
 
 /* ---------- FOOTER --------------------------*/
-.footer { background-color: blue;}
+.footer { background-color: #f1f1f1;}
 
