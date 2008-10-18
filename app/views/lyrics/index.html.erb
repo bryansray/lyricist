@@ -2,23 +2,23 @@
 	
 	<h1>Listing lyrics</h1>
 
-<table>
-  <tr>
-    <th>Text</th>
-  </tr>
+	<table>
+	  <tr>
+	    <th>Text</th>
+	  </tr>
 
-<% for lyric in @lyrics %>
-  <tr>
-    <td><%= lyric.text %></td>
-    <td><%= link_to 'Show', lyric %></td>
-    <td><%= link_to 'Edit', edit_lyric_path(lyric) %></td>
-    <td><%= link_to 'Destroy', lyric, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
+	<% for lyric in @lyrics %>
+	  <tr>
+	    <td><%= lyric.text %></td>
+	    <td><%= link_to 'Show', lyric %></td>
+	    <td><%= link_to 'Edit', edit_lyric_path(lyric) %></td>
+	    <td><%= link_to 'Destroy', lyric, :confirm => 'Are you sure?', :method => :delete %></td>
+	  </tr>
+	<% end %>
+	</table>
 
-
-<%= link_to 'New lyric', new_lyric_path %>
+	<%= link_to 'New lyric', new_lyric_path %>
+	
 </div>
 
 <div class="span-8 last rail">
