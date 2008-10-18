@@ -1,25 +1,25 @@
-<div class="span-16 body">
-    <div class="meta">
-        <span class="artist">Artist</span> - <span class="album">Album</span> - <span class="title">Title</span>
-    </div>
+<div class="span-16 body song">
+    <h1>Artist - Album</h1>
+	<h2>
+		Song Title
+		<% if logged_in? and @lyric.owner == current_user %>
+    	    <span><%= link_to 'Edit', edit_user_lyric_path(current_user, @lyric) %></span>
+    	<% end %>
+	</h2>
 
     <div class="lyric">
 	    <%= @lyric.to_html %>
 	</div>
-	
-	<div class="actions">
-	    <% if logged_in? and @lyric.owner == current_user %>
-    	    <%= link_to 'Edit', edit_user_lyric_path(current_user, @lyric) %>
-    	<% end %>
-    </div>
 
 </div>
 
 
 <div class="span-8 last rail">
+	
+	<h3>Songs</h3>
+	<p>Youtube call for videos on youtube</p>
 
-	<h2>Sub Headline</h2>
-
-	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+	<h3>Videos</h3>
+	<p>Youtube call for videos on youtube</p>
 	
 </div>

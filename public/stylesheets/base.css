@@ -228,7 +228,12 @@ div.content { background-color: #fff; min-height: 300px; padding-top: 2em; paddi
 	.lead h1 { color: #4E5963; }
 	.lead h2 { margin-bottom: 0; font-size: 2em; color: #B1B1B1; }
 
+	/* ---------- USER --------------------------*/
 
+	.biography .image { text-align: center;	}
+	.biography .image img {	border: 1px solid #cecece; padding: 2px; }
+	.biography .statement {	font-style: italic;	font-size: 11px; }
+	
 
 
 /* ---------- SIDEBAR --------------------------*/
