@@ -52,8 +52,7 @@ describe LyricsController do
 
   describe "responding to GET new" do
     before(:each) do
-      @current_user = mock_model(User, :to_param => 1)
-      controller.stub!(:current_user).and_return(@current_user)
+      controller.stub!(:current_user).and_return(mock_user)
     end
     it "should expose a new lyric as @lyric" do
       Lyric.should_receive(:new).and_return(mock_lyric)
@@ -65,8 +64,7 @@ describe LyricsController do
 
   describe "responding to GET edit" do
     before(:each) do
-      @current_user = mock_model(User, :to_param => 1)
-      controller.stub!(:current_user).and_return(@current_user)
+      controller.stub!(:current_user).and_return(mock_user)
     end
     
     it "should expose the requested lyric as @lyric" do
@@ -79,8 +77,7 @@ describe LyricsController do
 
   describe "responding to POST create" do
     before(:each) do
-      @current_user = mock_model(User, :to_param => 1)
-      controller.stub!(:current_user).and_return(@current_user)
+      controller.stub!(:current_user).and_return(mock_user)
     end
     
     describe "with valid params" do
@@ -119,8 +116,7 @@ describe LyricsController do
 
   describe "responding to PUT udpate" do
     before(:each) do
-      @current_user = mock_model(User, :to_param => 1)
-      controller.stub!(:current_user).and_return(@current_user)
+      controller.stub!(:current_user).and_return(mock_user)
     end
     
     describe "with valid params" do
@@ -171,8 +167,7 @@ describe LyricsController do
 
   describe "responding to DELETE destroy" do
     before(:each) do
-      @current_user = mock_model(User, :to_param => 1)
-      controller.stub!(:current_user).and_return(@current_user)
+      controller.stub!(:current_user).and_return(mock_user)
     end
     
     it "should destroy the requested lyric" do
