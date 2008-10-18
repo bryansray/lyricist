@@ -160,16 +160,15 @@ caption     { background: #eee; }
 		-moz-border-radius-topleft: 1em; -webkit-border-top-left-radius: 1em;
 		-moz-border-radius-topright: 1em; -webkit-border-top-right-radius: 1em;
 	}
-	.nav .menu {
+/*	.nav .menu {
 		float: left;
 		font-size: 12pt;
-	}
+	}*/
 	
 	.nav ul li { margin: 0 .25em 0 0; padding: .5em .25em 0 .25em; list-style-type: none; float: left; font-weight: bold; text-transform: uppercase; }
 	.nav ul li a { display: block; color: #fff; }
 	
-	.nav ul { /*width: 980px; margin: 0 auto;*/ margin: 0; font-size: 11pt; }
-	.nav ul li.current { }
+	.nav ul { /*width: 980px; margin: 0 auto;*/ margin: 0; font-size: 1.2em; }
 	.nav ul li a { padding: .25em .5em 0.5em .5em; text-decoration: none; }
 	.nav ul li.current a, div#nav ul li.current a:hover { color: #0a396f; background-color: #fff; -moz-border-radius-topleft: .5em; -webkit-border-top-left-radius: .5em;
 	-moz-border-radius-topright: .5em; -webkit-border-top-right-radius: .5em; }
@@ -178,20 +177,19 @@ caption     { background: #eee; }
 
 /* ---------- SEARCH --------------------------*/
 .nav form.search {
-	margin-right: 1em;
-	float: right;
+	margin-top: .75em;
+	text-align: right;
 }
 
-.nav form.search .textfields { 
+/*.nav form.search .textfields { 
 	float: left;
 }
 .nav form.search .buttons {
 	float: right;
 	margin: 0;
-}
-.nav form.search input {
- 	width: 150px;	
-	font-size: 12pt;
+}*/
+.nav form.search input {	
+	font-size: 1em;
 	color: #666;
 }
 

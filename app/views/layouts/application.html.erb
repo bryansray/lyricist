@@ -41,7 +41,7 @@
 			</div>
 		
 			<div class="span-24 nav">
-			    <ul class="span-13">
+			    <ul class="span-13 append-5">
 			        <li class="current"><%= link_to "Home", root_path %></li>
 		        
     			        <li>
@@ -54,16 +54,9 @@
 			        </li>
 			    </ul>
 			
-				<% form_tag searches_path, :class => "basic search" do  %>
-			        <div class="textfields">
-			            <div class="clearfix">
-                            <%= text_field_tag :search_query %>
-                        </div>
-                    </div>
-                    
-                    <div class="buttons">
-                        <input type="image" src="/images/search.png" style="width: 16px; padding-top: 11px; padding-left: 10px;" />
-                    </div>
+				<% form_tag searches_path, :class => "span-6 last search" do  %>
+
+                   	<%= text_field_tag :search_query %> <input type="image" src="/images/search.png" />
 			    <% end %>
 			</div>
 
