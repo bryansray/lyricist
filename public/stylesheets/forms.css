@@ -50,6 +50,7 @@ form.bigform .textfields input, form.bigform .textfields textarea {
 
 .main .login form .buttons {
 	margin-top: 1em;
+	text-align: left;
 }
 
 .main .login h3 {
@@ -71,6 +72,7 @@ form.bigform .textfields input, form.bigform .textfields textarea {
 }
 
 form .buttons {
+	text-align: right;
 	margin-top: 2em;
 }
 
@@ -83,5 +85,4 @@ button.green, .button.green, input.green {
   font-size: 14px;
   font-weight: bold;
   text-decoration: none; 
-	float: right;
 }
