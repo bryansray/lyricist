@@ -1,6 +1,4 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :searches
- 
   map.search_query '/search/:query', :controller => 'searches', :action => 'show'
   map.search '/search', :controller => 'searches', :action => 'index'
  
@@ -17,6 +15,9 @@ ActionController::Routing::Routes.draw do |map|
   
   # Restful Authentication Resources
   map.resources :users, :has_many => :lyrics
+  map.resources :searches
+  map.resources :artists
+  map.resources :albums
   map.resources :lyrics
   map.resources :passwords
   map.resource :session

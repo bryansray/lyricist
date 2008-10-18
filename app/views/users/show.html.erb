@@ -1,4 +1,4 @@
-<h1 class="title"><%= @user.name %>'s Profile</h1>
+<h1 class="title"><%= @user.name.blank? ? @user.email : @user.name %>'s Profile</h1>
 
 <div class="container">
     <div class="span-9 biography append-1">

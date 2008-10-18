@@ -1,48 +1,52 @@
-
 <% @user.password = @user.password_confirmation = nil %>
+
+<h2 class="title">Create your new Lyricist account</h2>
 
 <p>Creating a Lyricist account is simple and will allow you to start creating, editing, and commenting on the site. Take a minute to join the community!</p>
 
 
 <% form_for @user, :html => { :class => "bigform" } do |f| %>
 	<%= f.error_messages %>
-	
-	<div class="span-12 textfields">
-	    <div class="clearfix">
-			<%= f.label :login, 'Username' %>
-			<%= f.text_field :login %>	        
-	    </div>
-	    
-	    <div class="clearfix">
-			<%= f.label :email %>
-			<%= f.text_field :email %>
-	    </div>
-	    
-	    <div class="clearfix">
-		    <%= f.label :name %>
-		    <%= f.text_field :name %>	        
-	    </div>
-	    
-	    <div class="clearfix">
-	       	<%= f.label :password %>
-			<%= f.password_field :password %>
-	    </div>
-	    
-        <div class="clearfix">
-			<%= f.label :password_confirmation, 'Confirm Password' %>
-			<%= f.password_field :password_confirmation %>
-        </div>
-	</div>
-	
-	<div class="span-12 last textfields">
-	    	<h2>or ... signup with <strong>OpenID</strong>!!</h2>
-		<div class="clearfix">
-			<label for="openid_url">OpenID URL</label>
-			<%= text_field_tag :openid_url, params[:openid_url] || params['openid.identity'] %>	        
-	    </div>
-	</div>
 
+    <div class="container">	
+    	<div class="span-12 textfields">
+    	    <h3>Create a standard account ...</h3>
+    	    <div class="clearfix">
+    			<%= f.label :login, 'Username' %>
+    			<%= f.text_field :login %>	        
+    	    </div>
+	    
+    	    <div class="clearfix">
+    			<%= f.label :email %>
+    			<%= f.text_field :email %>
+    	    </div>
+	    
+    	    <div class="clearfix">
+    		    <%= f.label :name %>
+    		    <%= f.text_field :name %>	        
+    	    </div>
+	    
+    	    <div class="clearfix">
+    	       	<%= f.label :password %>
+    			<%= f.password_field :password %>
+    	    </div>
+	    
+            <div class="clearfix">
+    			<%= f.label :password_confirmation, 'Confirm Password' %>
+    			<%= f.password_field :password_confirmation %>
+            </div>
+    	</div>
+	
+	    <div class="span-12 last textfields">
+    	    	<h3>or use your existing <strong>OpenID</strong> account ...</h3>
+    		<div class="clearfix">
+    			<label for="openid_url">OpenID URL</label>
+    			<%= text_field_tag :openid_url, params[:openid_url] || params['openid.identity'] %>	        
+    	    </div>
+    	</div>
+    </div>
+	
 	<div class="buttons clearfix">
-		<%= submit_tag 'Sign up', :class => "green", :style => "width: 150px" %>
+		<%= submit_tag 'Sign Up!', :class => "green", :style => "width: 150px" %>
 	</div>
 <% end %>

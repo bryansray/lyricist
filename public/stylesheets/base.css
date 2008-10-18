@@ -213,10 +213,6 @@ caption     { background: #eee; }
 	font-size: 14pt;
 }
 	
-/* ---------- CONTENT --------------------------*/
-div.content { background-color: #fff; min-height: 300px; padding-top: 2em; padding-bottom: 5em;}
-
-.content h1 { padding-bottom: 10px; font-weight: bold; color: #666; border-bottom: 1px dotted #CECECE; }
 
 	/* ---------- INDEX - LEAD --------------------------*/
 	.lead {
@@ -298,11 +294,58 @@ div.footer {
 	font-family: "Trebuchet MS";
 }
 
-/*** GRAY BOX ***/
+/*** BOX ***/
+.box .actions {
+	text-align: right;
+}
+
 .box h3 {
-	margin: .4em;
+	margin-bottom: .5em;
+	border-bottom: 1px solid #cecece;
+	color: #666;
+	font-weight: bold;
 }
 .box.gray {
 	background-color: #efefef;
 	border: 1px solid #cecece;
+}
+
+/*** CREATE NEW USER ***/
+.users.new form.bigform h3 {
+	color: #666;
+	font-weight: bold;
+}
+
+/*** LOGIN ***/
+.sessions.new form.bigform h3 {
+	font-weight: bold;
+	color: #666;
+	margin-top: .5em;
+}
+
+/* ---------- CONTENT --------------------------*/
+div.content { background-color: #fff; min-height: 300px; padding-top: 2em; padding-bottom: 5em;}
+
+.content h1 { padding-bottom: 10px; font-weight: bold; color: #666; border-bottom: 1px dotted #CECECE; }
+
+/*** PAGE TITLE ***/
+body .content > .title {
+	height: 40px;
+	border-bottom: 1px dotted #cecece;
+	color: #666;
+	font-weight: bold;
+}
+
+
+.box.list .items a {
+	display: block;
+	padding: .2em;
+	padding-left: .8em;
+	border: 1px solid #cecece;
+	margin-bottom: .4em;
+	background-color: white;
+}
+
+.box.list .items a:hover {
+	border: 1px solid #666;
 }

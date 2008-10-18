@@ -1,4 +1,4 @@
-<h1>Log In to your Lyricist Account</h1>
+<h2 class="title">Log In to your Lyricist Account</h2>
 
 <% form_tag session_path, :class => "bigform" do %>
     <div class="textfields">
@@ -20,7 +20,7 @@
         </div>
     </div>
     
-    <h2>or use your OpenID Account ...</h2>
+    <h3>or use your OpenID Account ...</h3>
     
     
 	<div class="textfields">
@@ -31,7 +31,7 @@
 	</div>
 
 	<div class="buttons clearfix">
+	    <%= link_to 'Forgot your password?', forgot_password_path %> | 
 		<%= submit_tag 'Login', :class => "green", :style => "width: 150px" %>
-	    <%= link_to 'Forgotten Password', forgot_password_path %>
 	</div>
 <% end -%>

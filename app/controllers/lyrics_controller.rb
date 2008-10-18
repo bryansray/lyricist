@@ -5,6 +5,8 @@ class LyricsController < ApplicationController
   # GET /lyrics.xml
   def index
     @lyrics = Lyric.find(:all)
+    @artists = Artist.find :all, :limit => 5
+    @albums = Album.find :all, :limit => 5
 
     respond_to do |format|
       format.html # index.html.erb

@@ -1,30 +1,50 @@
 <div class="span-16">
-	
-	<h1>Listing lyrics</h1>
+    <div class="container">
+        <div class="span-8">    
+            <div class="box list">
+                <h3>Popular Artists</h3>
+                <div class="items">
+                    <% @artists.each do |artist| %>
+                        <div class="artist" id="artist-<%= artist.id %>">
+                            <%= link_to artist.name, artist_path(artist) %>
+                        </div>
+                    <% end %>
+                </div>
+                
+                <div class="actions">
+                    <%= link_to "View All", artists_path %>
+                </div>
+            </div>
+        </div>
 
-	<table>
-	  <tr>
-	    <th>Text</th>
-	  </tr>
+        <div class="span-8 last">    
+            <div class="box list">
+                <h3>Popular Albums</h3>
+                <div class="items">
+                    <% @albums.each do |album| %>
+                        <div class="album" id="album-<%= album.id %>">
+                            <%= link_to album.name, album_path(album) %>
+                        </div>
+                    <% end %>
+                </div>
+        
+                <div class="actions">
+                    <%= link_to "View All", albums_path %>
+                </div>
+            </div>
+        </div>
+    </div>
 
-	<% for lyric in @lyrics %>
-	  <tr>
-	    <td><%= lyric.text %></td>
-	    <td><%= link_to 'Show', lyric %></td>
-	    <td><%= link_to 'Edit', edit_lyric_path(lyric) %></td>
-	    <td><%= link_to 'Destroy', lyric, :confirm => 'Are you sure?', :method => :delete %></td>
-	  </tr>
-	<% end %>
-	</table>
-
-	<%= link_to 'New lyric', new_lyric_path %>
-	
+    <div class="box">
+        <h3>Latest Lyrics</h3>
+    </div>
 </div>
 
 <div class="span-8 last rail">
-	
-	<p>most active songs</p>
-	<p>top songs lyrics</p>
-	<p>sidebar goes here</p>
+	<div class="box gray" style="min-height: 500px">
+    	<p>most active songs</p>
+    	<p>top songs lyrics</p>
+    	<p>sidebar goes here</p>
+    </div>
 	
 </div>
