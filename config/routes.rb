@@ -1,6 +1,9 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :searches
  
+  map.search_query '/search/:query', :controller => 'searches', :action => 'show'
+  map.search '/search', :controller => 'searches', :action => 'index'
+ 
   # Restful Authentication Rewrites
   map.logout '/logout', :controller => 'sessions', :action => 'destroy'
   map.login '/login', :controller => 'sessions', :action => 'new'

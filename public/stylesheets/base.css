@@ -160,6 +160,10 @@ caption     { background: #eee; }
 		-moz-border-radius-topleft: 1em; -webkit-border-top-left-radius: 1em;
 		-moz-border-radius-topright: 1em; -webkit-border-top-right-radius: 1em;
 	}
+	.nav .menu {
+		float: left;
+		font-size: 12pt;
+	}
 	
 	.nav ul li { margin: 0 .25em 0 0; padding: .5em .25em 0 .25em; list-style-type: none; float: left; font-weight: bold; text-transform: uppercase; }
 	.nav ul li a { display: block; color: #fff; }
@@ -172,8 +176,37 @@ caption     { background: #eee; }
 	.nav ul li a:hover { color: #0a396f; background-color: #fff; -moz-border-radius-topleft: .5em; -webkit-border-top-left-radius: .5em;
 	-moz-border-radius-topright: .5em; -webkit-border-top-right-radius: .5em; }
 
-	/* ---------- SEARCH --------------------------*/
-	.search {margin-top: .75em; float: right;}
+/* ---------- SEARCH --------------------------*/
+.nav form.search {
+	margin-right: 1em;
+	margin-top: .5em;
+	float: right;
+}
+
+.nav form.search .textfields { 
+	float: left;
+}
+.nav form.search .buttons {
+	float: right;
+	margin: 0;
+}
+.nav form.search input {
+ 	width: 150px;	
+	font-size: 12pt;
+	color: #666;
+}
+
+.searches.show .results .result {
+	border-bottom: 1px solid #cecece;
+	background-color: #efefef;
+	padding: 10px 5px;
+}
+
+.searches.show .meta {
+	font-color: #cecece;
+	font-weight: bold;
+	font-size: 14pt;
+}
 	
 /* ---------- CONTENT --------------------------*/
 div.content { background-color: #fff; min-height: 300px; padding-top: 2em; padding-bottom: 5em;}

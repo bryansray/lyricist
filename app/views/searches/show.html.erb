@@ -1,30 +1,25 @@
-<p>
-  <b>Keywords:</b>
-  <%=h @search.keywords %>
-</p>
+<h2 class="title">Search Results <%= "(#{@results.size})" unless @results.empty? %></h2>
 
-<% @search.results[:songs].each do |song| -%>
-  <%= link_to "Song", song %>
-  <div>
-    <%= song.title %>
-  </div>
-<% end -%>
-
-<% @search.results[:artists].each do |artist| -%>
-  <%= link_to "Artist", artist %>
-  <div>
-    <%= artist.title %>
-  </div>
-<% end -%>
-
-<% @search.results[:lyrics].each do |lyric| -%>
-  <%= link_to "Lyric", lyric %>
-  <div>
-    <%= lyric.text %>
-  </div>
-<% end -%>
-
-
-
-<%= link_to 'Edit', edit_search_path(@search) %> |
-<%= link_to 'Back', searches_path %>
+<% if @results.empty? %>
+    <p>We were unable to find any lyrics matching your search criteria. Please <%= link_to "try again", searches_path %></p>
+<% else %>
+    <div class="results">
+        <% @results.each do |lyric| %>
+            <div class="result">
+                <div class="meta">
+                    <span class="artist">The Artist</span> - 
+                    <span class="album">The Album</span> - 
+                    <span class="title">The Title</span>
+                </div>
+            
+                <div class="lyrics">
+                    <%= lyric.text %>
+                
+                    <div class="more">
+                        <%= link_to "View All", lyric_path(lyric) %>
+                    </div>
+                </div>
+            </div>
+        <% end %>
+    </div>
+<% end %>

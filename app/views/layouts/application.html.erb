@@ -41,26 +41,30 @@
 			</div>
 		
 			<div class="span-24 nav">
-			    <ul class="span-13 append-7">
+			    <ul class="span-13">
 			        <li class="current"><%= link_to "Home", root_path %></li>
 		        
-			        <li>
-			            <a href="/">Community</a>
-			            <!-- <ul><li><%#= link_to "Members", users_path %></li></ul> -->
-			        </li>
+    			        <li>
+    			            <a href="/">Community</a>
+    			            <!-- <ul><li><%#= link_to "Members", users_path %></li></ul> -->
+    			        </li>
 		        
 			        <li>
 			            <%= link_to "Lyrics", lyrics_path %>
-		            
-			            <% if logged_in? %>
-
-			                    <li><%= link_to "Create New", new_lyric_path %></li>
-
-			            <% end %>
 			        </li>
 			    </ul>
 			
-				<div class="search"><%= link_to "Search", searches_path %> where search goes</div>
+				<% form_tag searches_path, :class => "basic search" do  %>
+			        <div class="textfields">
+			            <div class="clearfix">
+                            <%= text_field_tag :search_query %>
+                        </div>
+                    </div>
+                    
+                    <div class="buttons">
+                        <input type="image" src="/images/search.png" style="width: 16px; padding-top: 11px; padding-left: 10px;" />
+                    </div>
+			    <% end %>
 			</div>
 
 			<div class="span-24 content">

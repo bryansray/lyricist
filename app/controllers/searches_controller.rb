@@ -2,18 +2,19 @@ class SearchesController < ApplicationController
   # GET /searches
   # GET /searches.xml
   def index
-    @searches = Search.find(:all)
-
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @searches }
     end
   end
 
-  # GET /searches/1
-  # GET /searches/1.xml
+  # GET /searches/:query
+  # GET /search/:query
   def show
-    @search = Search.find(params[:id])
+    @search = ActsAsXapian::Search.new [Lyric], params[:query], :limit => 10
+    @results = @search.results.collect { |r| r[:model] }
+    
+    pp @results
 
     respond_to do |format|
       format.html # show.html.erb
@@ -40,18 +41,8 @@ class SearchesController < ApplicationController
   # POST /searches
   # POST /searches.xml
   def create
-    @search = Search.new(params[:search])
-
-    respond_to do |format|
-      if @search.save
-        flash[:notice] = 'Search was successfully created.'
-        format.html { redirect_to(@search) }
-        format.xml  { render :xml => @search, :status => :created, :location => @search }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @search.errors, :status => :unprocessable_entity }
-      end
-    end
+    puts "SEARCH POSTED"
+    render :show
   end
 
   # PUT /searches/1
