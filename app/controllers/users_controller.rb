@@ -7,6 +7,7 @@ class UsersController < ApplicationController
   
   def show
     @user = User.find_by_login params[:id]
+    @recent_lyrics = Lyric.find :all, :conditions => ["user_id = ?", current_user.id], :limit => 5
   end
   
   def edit

@@ -23,7 +23,22 @@
     </div>
     
     <div class="span-14 last">
-        right hand side
+        <div class="lyrics box gray">
+            <h3>Recently Added Lyrics</h3>
+            <% @recent_lyrics.each_with_index do |lyric, i| %>
+                <div class="lyric <%= i % 2 == 0 ? 'odd' : 'even' %>" id="lyric-<%= lyric.id %>">
+                    <div class="meta">
+                        <span class="artist">Artist</span> -
+                        <span class="album">Album</span> -
+                        <span class="title">Title</span>
+                    </div>
+                    
+                    <div class="actions">
+                        View Lyrics
+                    </div>
+                </div>
+            <% end %>
+        </div>
     </div>
     
 </div>

@@ -1,10 +1,17 @@
 <div class="span-16 body">
-	<h1>Band</h1>
-	<h2>Album</h2>
+    <div class="meta">
+        <span class="artist">Artist</span> - <span class="album">Album</span> - <span class="title">Title</span>
+    </div>
 
-	<%= @lyric.text %>
-	<%= link_to 'Edit', edit_user_lyric_path(@user, @lyric) %> |
-	<%= link_to 'Back', user_lyrics_path(@user) %>
+    <div class="lyric">
+	    <%= @lyric.to_html %>
+	</div>
+	
+	<div class="actions">
+	    <% if logged_in? and @lyric.owner == current_user %>
+    	    <%= link_to 'Edit', edit_user_lyric_path(current_user, @lyric) %>
+    	<% end %>
+    </div>
 
 </div>
 

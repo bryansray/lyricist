@@ -1,11 +1,35 @@
 <h1>Editing lyric</h1>
 
-<% form_for(@lyric) do |f| %>
-  <%= f.error_messages %>
+<% form_for(@lyric, :html => { :class => "bigform" }) do |f| %>
+    <%= f.error_messages %>
+    
+    <div class="textfields">
+        <div class="clearfix">
+            <label>Artist</label>
+            <input type="text" />
+        </div>
+        
+        <div class="clearfix">
+            <label>Album</label>
+            <input type="text" />
+        </div>
 
-  <p>
-    <%= f.submit "Update" %>
-  </p>
+        <div class="clearfix">
+            <label>Title</label>
+            <input type="text" />
+        </div>
+    </div>
+    
+    <div class="textarea">
+        <div class="clearfix">
+            <%= f.label :text, "Lyrics" %>
+            <%= f.text_area :text %>          
+        </div> 
+    </div>
+    
+    <div class="buttons clearfix">
+        <%= link_to "Cancel", lyrics_path %> | <%= f.submit "Create", :class => "green", :style => "width: 150px" %>
+    </div>
 <% end %>
 
 <%= link_to 'Show', @lyric %> |

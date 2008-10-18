@@ -13,6 +13,10 @@ body {
 	margin: 0;
 }
 
+body .content {
+	line-height: 1.6em;
+}
+
 /* Headings
 -------------------------------------------------------------- */
 
@@ -262,3 +266,36 @@ div.footer {
 	text-align: right;
 }
 
+
+
+/*** LYRICS ***/
+.users.show .lyrics { padding: 0; }
+
+.lyrics .lyric {
+	margin: .5em 0;
+	padding: .3em;
+}
+
+.lyrics .lyric.odd {
+	background-color: #cecece;
+}
+
+.lyrics .meta {
+	font-size: 14pt;
+	color: #666;
+}
+
+.lyrics.show .lyric {
+	font-size: 10pt;
+	padding: 15px 0;
+	font-family: "Trebuchet MS";
+}
+
+/*** GRAY BOX ***/
+.box h3 {
+	margin: .4em;
+}
+.box.gray {
+	background-color: #efefef;
+	border: 1px solid #cecece;
+}
