@@ -77,19 +77,27 @@ describe LyricsController do
 
   describe "responding to POST create" do
     before(:each) do
-      controller.stub!(:current_user).and_return(mock_user)
+      @current_user = mock_user
+      controller.stub!(:current_user).and_return(@current_user)
     end
     
     describe "with valid params" do
+      it "should set the current user as the owner of the lyrics" do
+        lyric = Lyric.stub!(:new).and_return(mock_lyric(:save => true))
+        mock_lyric.should_receive(:owner=).with(@current_user)
+        post :create, :lyric => {}
+      end
       
       it "should expose a newly created lyric as @lyric" do
         Lyric.should_receive(:new).with({'these' => 'params'}).and_return(mock_lyric(:save => true))
+        mock_lyric.stub!(:owner=)
         post :create, :lyric => {:these => 'params'}
         assigns(:lyric).should equal(mock_lyric)
       end
 
       it "should redirect to the created lyric" do
         Lyric.stub!(:new).and_return(mock_lyric(:save => true))
+        mock_lyric.stub!(:owner=)
         post :create, :lyric => {}
         response.should redirect_to(lyric_url(mock_lyric))
       end
@@ -100,12 +108,14 @@ describe LyricsController do
 
       it "should expose a newly created but unsaved lyric as @lyric" do
         Lyric.stub!(:new).with({'these' => 'params'}).and_return(mock_lyric(:save => false))
+        mock_lyric.stub!(:owner=)
         post :create, :lyric => {:these => 'params'}
         assigns(:lyric).should equal(mock_lyric)
       end
 
       it "should re-render the 'new' template" do
         Lyric.stub!(:new).and_return(mock_lyric(:save => false))
+        mock_lyric.stub!(:owner=)
         post :create, :lyric => {}
         response.should render_template('new')
       end
