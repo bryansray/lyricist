@@ -1,0 +1,22 @@
+<div class="login">
+    <h3>Member already? Log In below</h3>
+    
+    <% form_tag session_path, :class => "basic" do %>
+        <div class="textfields">
+            <div class="clearfix">
+        		<%= label_tag 'login', 'Username' %>
+        		<%= text_field_tag 'login', @login %>
+            </div>
+            
+            <div class="clearfix">
+    			<%= label_tag 'password' %>
+    			<%= password_field_tag 'password', nil %>
+            </div>
+        </div>
+        
+    	<div class="buttons clearfix">
+    		<%= submit_tag 'Login', :class => "green", :style => "width: 150px" %>
+    	    <%= link_to 'Forgotten Password', forgot_password_path %>
+    	</div>
+    <% end %>
+</div>

@@ -1,17 +1,18 @@
 <%= title "Forgot Your Password?", :h2 %>
-<% form_for @password do |f| %>
+
+<p>Enter in the email address you signed up with and we'll take care of you!</p>
+
+<% form_for @password, :html => { :class => "bigform" } do |f| %>
   <%= f.error_messages %>
-	<fieldset>
-		<legend>Enter Your Email Address</legend>
-		<ol>
-			<li>			
+    <div class="textfields">
+        <div class="clearfix">
 		    <%= f.label :email %>
-		    <%= f.text_field :email %>
-			</li>
-		</ol>
-	</fieldset>
+		    <%= f.text_field :email %>          
+        </div>
+    </div>
+    
 	<div class="buttons">
-  	<%= f.submit "Submit" %>
+  	    <%= f.submit "Request Reset", :class => "green",  :style => "width: 150px" %>
 	</div>
 <% end %>
 

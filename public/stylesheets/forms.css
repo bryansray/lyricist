@@ -1,3 +1,4 @@
+/*** BIG FORM ***/
 form.bigform {
 	margin: 15px auto;
 	width: 650px;
@@ -12,7 +13,7 @@ form.bigform .checkboxes label {
 	font-weight: bold;
 	margin-left: 10px;
 }
-form.bigform .textfields div, form.bigform .checkboxes div {
+form.bigform .textfields div, form.bigform .checkboxes div, form.basic .textfields div {
 	clear: both;
 	margin: 4px 0;
 	position: relative;
@@ -33,6 +34,40 @@ form.bigform .textfields input, form.bigform .textfields textarea {
   width: 390px;
   padding: 4px;
   font-size: 14px; 
+}
+
+/*** HOME LOGIN FORM ***/
+.main .login {
+	border: 1px solid #d0e7d1;
+	color: #3d9655;
+	background-color: #EBF7D9;
+	margin: 10px auto;
+	padding: 5px;
+	width: 282px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+
+.main .login form .buttons {
+	margin-top: 1em;
+}
+
+.main .login h3 {
+	color: darkBlue;
+	border-bottom: 1px solid lightBlue;
+}
+
+.main .login form label { 
+	float: left;
+	width: 100px;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.main .login form input {
+	float: right;
+	padding: 2px;
+	width: 132px;
 }
 
 form .buttons {

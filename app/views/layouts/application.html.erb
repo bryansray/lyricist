@@ -2,7 +2,7 @@
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 	<head>
-		<title><%= @page_title || APP_CONFIG[:site_name] %></title>
+		<title><%= @page_title || APP_CONFIG[:site_name] %> <%= ".::. #{controller.controller_name} - #{controller.action_name}" if RAILS_ENV == 'development' %></title>
 		<meta http-equiv="content-type" content="text/xhtml; charset=utf-8" />
 		<meta http-equiv="imagetoolbar" content="no" />
 		<meta name="distribution" content="all" />
@@ -20,7 +20,7 @@
 	    <%= javascript_include_tag 'jquery/jquery.hoverIntent.js', 'jquery/superfish.js' %>
 	    <%= javascript_include_tag 'application.js' %>
 	</head>
-	<body>
+	<body class="<%= "#{controller.controller_name} #{controller.action_name}" %>">
 		<div class="header">
             <div class="container">
 			    <p class="span-7 brand">Lyricist<span>app</span></p>
@@ -69,6 +69,7 @@
 		</div>
 		<div id="container" class="container showgrid">
 			<div class="span-24 content">
+			    <% unless flash.empty? %>
 				<div id="flash_messages">
 				    <% flash.each do |key, value| %>
 				        <div id="flash_message" class="alert <%= key %>">
@@ -76,7 +77,7 @@
 				        </div>
 				    <% end %>
 				</div>
-				
+				<% end %>
 				<%= yield :layout %>
 			</div>
 		</div>
