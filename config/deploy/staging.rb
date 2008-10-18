@@ -2,8 +2,8 @@
 #	Application
 #############################################################
 
-set :application, "bort"
-set :deploy_to, "/path/to/deploy"
+set :application, "lyricist"
+set :deploy_to, "/root/lyricist"
 
 #############################################################
 #	Settings
@@ -19,8 +19,8 @@ set :rails_env, "staging"
 #	Servers
 #############################################################
 
-set :user, "bort"
-set :domain, "www.example.com"
+set :user, "root"
+set :domain, "72.14.181.31"
 server domain, :app, :web
 role :db, domain, :primary => true
 
@@ -30,9 +30,9 @@ role :db, domain, :primary => true
 
 set :scm, :git
 set :branch, "master"
-set :scm_user, 'bort'
-set :scm_passphrase, "PASSWORD"
-set :repository, "git@github.com:FudgeStudios/bort.git"
+set :scm_user, 'rayvinly'
+set :scm_passphrase, ""
+set :repository, "git@github.com:railsrumble/the-unstable-isotopes.git"
 set :deploy_via, :remote_cache
 
 #############################################################
@@ -48,7 +48,7 @@ namespace :deploy do
       encoding: utf8
       username: root
       password: 
-      database: bort_staging
+      database: lyricist_staging
       host: localhost
     EOF
     

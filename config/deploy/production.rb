@@ -2,14 +2,15 @@
 #	Application
 #############################################################
 
-set :application, "bort"
-set :deploy_to, "/path/to/deploy"
+set :application, "lyricst"
+set :deploy_to, "/root/lyricist"
 
 #############################################################
 #	Settings
 #############################################################
 
 default_run_options[:pty] = true
+ssh_options[:keys] = ["#{ENV['HOME']}/.ssh/id_rsa"]
 ssh_options[:forward_agent] = true
 set :use_sudo, true
 set :scm_verbose, true
@@ -19,8 +20,8 @@ set :rails_env, "production"
 #	Servers
 #############################################################
 
-set :user, "bort"
-set :domain, "www.example.com"
+set :user, "root"
+set :domain, "72.14.181.31"
 server domain, :app, :web
 role :db, domain, :primary => true
 
@@ -30,9 +31,9 @@ role :db, domain, :primary => true
 
 set :scm, :git
 set :branch, "master"
-set :scm_user, 'bort'
-set :scm_passphrase, "PASSWORD"
-set :repository, "git@github.com:FudgeStudios/bort.git"
+set :scm_user, 'rayvinly'
+set :scm_passphrase, ""
+set :repository, "git@github.com:railsrumble/the-unstable-isotopes.git"
 set :deploy_via, :remote_cache
 
 #############################################################
@@ -48,7 +49,7 @@ namespace :deploy do
       encoding: utf8
       username: root
       password: 
-      database: bort_production
+      database: lyricist_production
       host: localhost
     EOF
     
