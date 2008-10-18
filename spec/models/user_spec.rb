@@ -6,6 +6,15 @@ require File.dirname(__FILE__) + '/../spec_helper'
 include AuthenticatedTestHelper
 
 describe User do
+  it "should have multiple lyrics" do
+    lyric = Lyric.generate
+    user = User.generate
+    user.lyrics << lyric
+    user.should have(1).lyrics
+  end
+end
+
+describe User do
   fixtures :users
 
   describe 'being created' do
