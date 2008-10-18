@@ -4,7 +4,7 @@ class LyricsController < ApplicationController
   # GET /lyrics
   # GET /lyrics.xml
   def index
-    @lyrics = Lyric.find(:all)
+    @lyrics = @user.lyrics.find(:all)
 
     respond_to do |format|
       format.html # index.html.erb

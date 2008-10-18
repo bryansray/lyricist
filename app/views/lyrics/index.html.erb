@@ -2,10 +2,12 @@
 
 <table>
   <tr>
+    <th>Text</th>
   </tr>
 
 <% for lyric in @lyrics %>
   <tr>
+    <td><%= lyric.text %></td>
     <td><%= link_to 'Show', lyric %></td>
     <td><%= link_to 'Edit', edit_lyric_path(lyric) %></td>
     <td><%= link_to 'Destroy', lyric, :confirm => 'Are you sure?', :method => :delete %></td>
