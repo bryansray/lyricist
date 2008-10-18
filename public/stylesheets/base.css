@@ -201,13 +201,13 @@ caption     { background: #eee; }
 	color: #666;
 }
 
-.searches.show .results .result {
+.results .result {
 	border-bottom: 1px solid #cecece;
 	background-color: #efefef;
 	padding: 10px 5px;
 }
 
-.searches.show .meta {
+.results .result .meta {
 	font-color: #cecece;
 	font-weight: bold;
 	font-size: 14pt;
