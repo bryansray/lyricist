@@ -158,6 +158,7 @@ caption     { background: #eee; }
 	/* ---------- NAVIGATION --------------------------*/
 	.nav {
 		background-color: #65AEF3;
+		font-size: 13pt;
 		-moz-border-radius-topleft: 1em; -webkit-border-top-left-radius: 1em;
 		-moz-border-radius-topright: 1em; -webkit-border-top-right-radius: 1em;
 	}
@@ -165,12 +166,12 @@ caption     { background: #eee; }
 	.nav .sf-menu {	margin: .2em 0; }
 
 	/* ---------- SEARCH --------------------------*/
-	.search {margin-top: .75em;}
+	.search {margin-top: .75em; float: right;}
 	
 /* ---------- CONTENT --------------------------*/
 div.content { background-color: #fff; min-height: 300px; padding-top: 1em; padding-bottom: 5em;}
 
-.content h1 { margin-bottom: 20px; font-weight: bold; color: #666; border-bottom: 1px dotted #CECECE; }
+.content h1 { padding-bottom: 10px; font-weight: bold; color: #666; border-bottom: 1px dotted #CECECE; }
 
 	/* ---------- INDEX - LEAD --------------------------*/
 	.lead {
