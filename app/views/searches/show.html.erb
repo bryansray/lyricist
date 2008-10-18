@@ -3,6 +3,28 @@
   <%=h @search.keywords %>
 </p>
 
+<% @search.results[:songs].each do |song| -%>
+  <%= link_to "Song", song %>
+  <div>
+    <%= song.title %>
+  </div>
+<% end -%>
+
+<% @search.results[:artists].each do |artist| -%>
+  <%= link_to "Artist", artist %>
+  <div>
+    <%= artist.title %>
+  </div>
+<% end -%>
+
+<% @search.results[:lyrics].each do |lyric| -%>
+  <%= link_to "Lyric", lyric %>
+  <div>
+    <%= lyric.text %>
+  </div>
+<% end -%>
+
+
 
 <%= link_to 'Edit', edit_search_path(@search) %> |
 <%= link_to 'Back', searches_path %>
