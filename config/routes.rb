@@ -25,6 +25,8 @@ ActionController::Routing::Routes.draw do |map|
   
   # Home Page
   map.root :controller => 'main', :action => 'index'
+  map.help '/help', :controller => 'main', :action => 'help'
+  map.about '/about', :controller => 'main', :action => 'about'
 
   # Install the default routes as the lowest priority.
   map.connect ':controller/:action/:id'
