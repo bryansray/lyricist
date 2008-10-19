@@ -1,10 +1,10 @@
 <div class="span-17 body">
-<h1><%= link_to @song.artist.name, @song.artist %> 	<span><%= link_to 'Edit', edit_song_path(@song) %> <%= link_to 'Back', songs_path %></span></h1> 
-<h2><%= link_to @song.album.name, @song.album %> > <%= @song.title %> </h2>
+    <h1><%= link_to @song.artist.name, @song.artist %> </h1> 
+    <h2><%= link_to @song.album.name, @song.album %> > <%= @song.title %> </h2>
 
-<% if @song.lyrics.empty? %>
-    <p>This song does not currently have any lyrics. Why not get them started now?</p>
-<% end %>
+    <% if @song.lyrics.empty? %>
+        <p>This song does not currently have any lyrics. Why not get them started now?</p>
+    <% end %>
 </div>
 
 <div class="span-7 last rail">
