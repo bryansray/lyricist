@@ -14,10 +14,14 @@
    			</div>
 		</fieldset>
 		
-		<fieldset id="openid_login" class="span-6 last" style="display: none;">
-			<%= label_tag 'openid_url', 'or OpenID' %>
-            <%= text_field_tag 'openid_url' %>
+		<fieldset id="openid_login" class="" style="display: none;">
+		    <div class="clearfix">
+    			<%= label_tag 'openid_url', 'or OpenID' %>
+                <%= text_field_tag 'openid_url' %>
+            </div>
         </fieldset>
+        
+        <p style="font-weight: bold; font-size: 1.5em; margin-bottom: .3em; text-align: right;"><a href="#" class="show_openid_form">OpenID Login</a></p>
         
     	<div class="buttons">
     		<%= submit_tag 'Login', :class => "green", :style => "width: 150px" %>

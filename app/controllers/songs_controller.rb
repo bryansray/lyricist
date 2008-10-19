@@ -6,6 +6,7 @@ class SongsController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
+      format.rss # index.rss.builder
       format.xml  { render :xml => @songs }
     end
   end
