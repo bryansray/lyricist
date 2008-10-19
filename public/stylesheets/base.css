@@ -135,13 +135,13 @@ caption     { background: #eee; }
 }
 
 .header p{ margin-bottom: 0;}
-.header p.brand a{ text-indent: -9999px; width: 300px; height: 93px; display:block; background: #041121 url("/images/logo.png") no-repeat top left; }
+.header p.brand a{ text-indent: -9999px; width: 300px; height: 83px; display:block; background: #041121 url("/images/logo.png") no-repeat top left; }
 .header p.brand span { font-size: .5em; color: lightblue; text-transform: lowercase; font-style: normal; } 
-.header p.tagline { padding-top: 1em; font-size: 1.5em; color: orange; text-transform: lowercase;}
+.header p.tagline { padding-top: 1.5em; font-size: 1.5em; color: orange; text-transform: lowercase;}
 
 	/* ---------- DASHBOARD --------------------------*/
 	.header ul.dashboard { margin-bottom:0; margin-left: 0; display: inline; }
-	.header ul.dashboard li { float: right; display: block; height: 20px; line-height: 20px; margin: 1.75em 2px 0; cursor: pointer; list-style: none; }
+	.header ul.dashboard li { float: right; display: block; height: 20px; line-height: 20px; margin: 2.5em 2px 0; cursor: pointer; list-style: none; }
 
 	.header ul.dashboard li a {
 		padding: 0;
