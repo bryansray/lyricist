@@ -1,3 +1,4 @@
+<div class="span-16 body">
 <% @user.password = @user.password_confirmation = nil %>
 
 <h1>Create your new Lyricist account</h1>
@@ -45,8 +46,14 @@
     	    </div>
     	</div>
     </div>
-	
+
 	<div class="buttons clearfix">
 		<%= submit_tag 'Sign Up!', :class => "green", :style => "width: 150px" %>
 	</div>
 <% end %>
+
+</div>
+
+<div class="span-8 last rail">
+	<%= render :partial => "shared/generic_module" %>
+</div>
