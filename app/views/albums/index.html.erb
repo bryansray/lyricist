@@ -19,7 +19,9 @@
 		</div>
 		<div class="ft">
 			<%= will_paginate @albums %>
-			<p><a class="feed" href="#"><img alt="RSS feed" src="images/feed-icon-14x14.png"/> Subscribe to the RSS feed</a></p>
+			<p>
+        <%= link_to "#{image_tag 'feed-icon-14x14.png'} Subscribe to the RSS feed", formatted_albums_path(:rss), :class => "feed"  %>
+      </p>
 		</div>
 	</div>
 

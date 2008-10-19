@@ -2,10 +2,11 @@ class AlbumsController < ApplicationController
   # GET /albums
   # GET /albums.xml
   def index
-    @albums = Album.find(:all).paginate(:page => params[:page])
+    @albums = Album.find(:all, :include => :artist).paginate(:page => params[:page])
 
     respond_to do |format|
       format.html # index.html.erb
+      format.rss # index.rss.builder
       format.xml  { render :xml => @albums }
     end
   end
