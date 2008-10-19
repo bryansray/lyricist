@@ -3,13 +3,34 @@
 	    <h2>Yea, we were too!</h2>
 	</div>
 
-    <div class="span-13 append-3">
+    <div class="span-12">
         <h2>What is Lyricist?</h2>
         
         <p>Lyricists is a <strong>totally free</strong> and <strong>extremely simple</strong> community based Lyrics site. We allow our members to create new lyrics, modify existing lyrics, and discuss the meaning of the lyrics all without having advertisements or popups crammed down your throat like all the other circa 1995 lyrics sites out there. </p>
     </div>
 
-    <div class="span-8 last rail">
+    <div class="span-6">
+        <div class="box popular_lyrics">
+            <h3>Most Popular Lyrics</h3>
+            
+            <ul class="lyrics list">
+                <li>Stone Temple Pilots - Plush</li>
+                <li>Pearl Jam - Evenflow</li>
+            </ul>
+        </div>	
+        
+        
+        <div class="box latest_lyrics">
+            <h3>Latest Lyrics</h3>
+            
+            <ul class="lyrics list">
+                <li class="lyric">Vertical Horizon - Life in the City</li>
+                <li class="lyric">Guster - Happier</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="span-6 last rail">
         <%= render :partial => '/shared/login_box' unless logged_in? %>
 
         <div class="box popular_lyrics">

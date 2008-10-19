@@ -302,8 +302,8 @@ div.footer {
 	background-color: #235389;
 	color: #6691BE;
 	margin-bottom: 3em;
-	padding-top: 2em;
-	padding-bottom: 2em;
+	padding-top: 1em;
+	padding-bottom: 1em;
 	-moz-border-radius-bottomleft: 1em; -webkit-border-bottom-left-radius: 1em;
 	-moz-border-radius-bottomright: 1em; -webkit-border-bottom-right-radius: 1em;
 }
@@ -312,17 +312,21 @@ div.footer {
 	list-style-image: none;
 	list-style-position: outside;
 	list-style-type: none;
-	margin: 0 .85em;
-	height: 175px;
+	margin: 0 1em 0 0;
+	height: 165px;
 	background-color: #235389;
 	border: 1px solid #456890;
+	width:203px;
+	-moz-border-radius: 1em;
+	-webkit-border-radius: 1em;
 }
+
+.footer ul.box.last { margin: 0; padding-right: .8em;}
 
 .footer ul li h3 { color: #fff; padding-bottom: .3em; text-transform: uppercase; font-weight:normal; font-size: 1em; border-bottom: 1px solid #456890; }
 
-.footer ul li a {
-	color: #6691BE;
-}
+.footer ul li a { color: #6691BE; }
+.footer ul li a:hover { color: orange; }
 
 
 
