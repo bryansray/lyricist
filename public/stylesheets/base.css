@@ -234,7 +234,53 @@ caption     { background: #eee; }
 	.biography .image img {	border: 1px solid #cecece; padding: 2px; }
 	.biography .statement {	font-style: italic;	font-size: 11px; }
 	
+.pagination li{
+	border:0; margin:0; padding:0;
+	font-size:11px;
+	list-style:none;
+}
 
+.pagination li, 
+.pagination a{
+	border:solid 1px #DEDEDE
+	margin-right:2px;
+}
+
+.pagination .previous-off,
+.pagination .next-off {
+	color:#888888
+	display:block;
+	float:left;
+	font-weight:bold;
+	padding:3px 4px;
+}
+
+.pagination .next a,
+.pagination .previous a {
+	font-weight:bold;
+	border:solid 1px #FFFFFF;
+}
+
+.pagination .active{
+	color:#00000
+	font-weight:bold;
+	display:block;
+	float:left;
+	padding:4px 6px;
+}
+
+.pagination a:link,
+.pagination a:visited {
+	color:#0033CC
+	display:block;
+	float:left;
+	padding:3px 6px;
+	text-decoration:none;
+}
+
+.pagination a:hover{
+	text-decoration:none;
+}
 
 /* ---------- SIDEBAR --------------------------*/
 /*.body img { margin: 0 0 1em 0;}*/

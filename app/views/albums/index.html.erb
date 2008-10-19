@@ -1,6 +1,8 @@
 <div class="span-16 body">
 	<h1>Listing albums</h1>
-
+	
+	<%= link_to 'New album', new_album_path %>
+	
 	<table>
 	  <tr>
 	    <th>Name</th>
@@ -20,8 +22,6 @@
 	  </tr>
 	<% end %>
 	</table>
-
-	<%= link_to 'New album', new_album_path %>
 
 	<%= will_paginate @albums %>
 
