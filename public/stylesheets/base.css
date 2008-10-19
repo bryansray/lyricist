@@ -1,4 +1,4 @@
-.container { width: 970px; background: #041121 url("/images/microphone.png") no-repeat 150px 2px;}
+.container { width: 970px;}
 .span-24, div.span-24 { width: 950px; padding: 0 10px;}
 
 /* Typography
@@ -131,11 +131,11 @@ caption     { background: #eee; }
 
 /* ---------- HEADER --------------------------*/
 .header {
-	margin-top: .5em; margin-bottom: 1em;
+	margin-top: .5em; margin-bottom: 0;
 }
 
 .header p{ margin-bottom: 0;}
-.header p.brand a{ font-weight: bold; text-transform: uppercase ; font-size: 3em; text-decoration: none; color:#fff; }
+.header p.brand a{ text-indent: -9999px; width: 300px; height: 93px; display:block; background: #041121 url("/images/logo.png") no-repeat top left; }
 .header p.brand span { font-size: .5em; color: lightblue; text-transform: lowercase; font-style: normal; } 
 .header p.tagline { padding-top: 1em; font-size: 1.5em; color: orange; text-transform: lowercase;}
 
