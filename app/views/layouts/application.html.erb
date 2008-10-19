@@ -10,8 +10,7 @@
 		<meta name="resource-type" content="document" />
 		<meta name="MSSmartTagsPreventParsing" content="true" />
 		<%= stylesheet_link_tag 'screen' %>
-		<%= stylesheet_link_tag 'base', 'master', 'forms' %>
-		<%= stylesheet_link_tag 'superfish' %>
+		<%= stylesheet_link_tag 'forms', 'base'  %>
         
         <!--[if IE]>
           <link rel="stylesheet" href="<%= stylesheet_link_tag 'ie' %>" type="text/css" media="screen, projection">
@@ -70,14 +69,33 @@
 
 			<div class="span-24 footer">
 				<ul class="span-6">
+					<li><h3>this is a test</h3></li>
 				    <li><%= link_to "Home", root_path %></li>
 				    <li>Help &amp; FAQs</li>
 				    <li>About</li>
 				</ul>
+				
+				<ul class="span-6">
+					<li>&nbsp;</li>
+				</ul>
+				
+				<ul class="span-6">
+					<li>&nbsp;</li>
+				</ul>
+				
+				<ul class="span-6 last copyright">
+					<li><h3>Powered by:</h3></li>
+					<li><a href="http://rubyonrails.org">Rails</a></li>
+					<li><a href="http://jquery.com">jQuery</a></li>
+					<li><a href="http://railsrumble.com">Rumble</a></li>
+					<li><a href="http://linode.com">linode</a></li> 
+					<li><a href="http://github.com">github</a></li>
+					<li><a href="http://www.monsterenergy.com/">Monster</a></li>
+					<li><a href="http://mountaindew.com">Mountain Dew</a></li>
+					<li>and <a href="http://www.littledebbie.com/products/SwissCake.asp">Swiss Cake Rolls</a>!</li>					
+				</ul>
 
-				<p class="span-17 last copyright">
-				    Powered by: <a href="http://rubyonrails.org" target="_new">Rails</a>, <a href="http://jquery.com" target="_new">jQuery</a>, <a href="http://railsrumble.com" target="_new">Rumble</a>, <a href="http://linode.com" target="_new">linode</a>, <a href="http://github.com" target="_new">github</a>, <a href="http://www.monsterenergy.com/" target="_new">Monster</a>, <a href="http://mountaindew.com" target="_new">Mountain Dew</a>, and <a href="http://www.littledebbie.com/products/SwissCake.asp" target="_new">Swiss Cake Rolls</a>!
-				</p>
+
 			</div>
 		</div>
 	
