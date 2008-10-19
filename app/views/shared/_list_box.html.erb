@@ -9,6 +9,6 @@
     </div>
     
     <div class="actions">
-        <%= link_to "View All", polymorphic_path(records.first.class.new) %>
+        <%= link_to "View All", polymorphic_path(records.first.class.new) if records.any? %>
     </div>
 </div>
