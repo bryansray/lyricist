@@ -381,7 +381,7 @@ div.footer {
 /* ---------- CONTENT --------------------------*/
 div.content { background-color: #fff; min-height: 300px; padding-top: 2em; padding-bottom: 2em;}
 
-.content h1 { position: relative; padding-bottom: 10px; font-weight: bold; color: #666; border-bottom: 1px solid #CECECE; margin-bottom: 0;}
+.content h1 { position: relative; padding-bottom: 10px; font-weight: bold; color: #666; border-bottom: 1px solid #CECECE; margin-bottom: .4em; }
 .content h1 a {text-decoration: none; color:#666; border: none;}
 .content h1 span { position: absolute; right: 0; font-size:.5em; top: 1em; }
 
