@@ -13,10 +13,6 @@ body {
 	margin: 0;
 }
 
-body .content {
-	line-height: 1.6em;
-}
-
 /* Headings
 -------------------------------------------------------------- */
 
@@ -212,6 +208,7 @@ caption     { background: #eee; }
 	.content .lead h1 { color: #4E5963; margin-bottom: .5em; text-transform: capitalize; }
 	.content .lead h2 { margin-bottom: 0; font-size: 2em; color: #B1B1B1; text-transform: capitalize; }
 
+	.content .body .span-9 { margin-top: 1em; }
 	/* ---------- USER -----------------------------------*/
 
 	/* ---------- USER Index Page ------------------------*/
@@ -458,11 +455,18 @@ div.content { background-color: #fff; min-height: 300px; padding-top: 2em; paddi
 }
 
 /*MODULE FOR RIGHT RAIL*/
-div.rail .mod {background-color: #e1e1e1;}
-div.rail ul { list-style: none; padding: 1em; margin: 0; }
-div.rail ul li h3{ margin-bottom: .5em; }
+div.rail .mod {background-color: #e1e1e1; padding: 1em;  }
+div.rail .mod.alt {background-color: #235389;}
+div.rail .mod.secondary {background-color: #9FE722;}
+div.rail .mod.destroy {background-color: #ffc9be;}
 
+div.rail .mod h3 { margin-bottom: 0; }
+div.rail ul { list-style: none; margin: 0; }
+div.rail div.bd ul li {padding-right: 0; padding-left: 0;}
+div.rail div.bd ul li a { text-decoration: underline;}
 
+div.rail div.bd ul li:hover, div.rail div.bd ul li a:hover { background:none; }
+div.rail div.bd ul li a:hover { color: orange; }
 
 
 
