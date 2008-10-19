@@ -4,6 +4,18 @@
   <%= f.error_messages %>
 
   <p>
+    <%= f.label :album_name %>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :artist_name %>
+    <% fields_for @album.artist || Artist.new do |artist| %>
+      <%= artist.text_field :name %>
+    <% end %>
+  </p>
+
+  <p>
     <%= f.submit "Update" %>
   </p>
 <% end %>

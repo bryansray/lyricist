@@ -41,6 +41,7 @@ class AlbumsController < ApplicationController
   # POST /albums.xml
   def create
     @album = Album.new(params[:album])
+    @album.artist = Artist.find_or_create_by_name(params[:artist][:name])
 
     respond_to do |format|
       if @album.save
@@ -58,6 +59,7 @@ class AlbumsController < ApplicationController
   # PUT /albums/1.xml
   def update
     @album = Album.find(params[:id])
+    @album.artist = Artist.find_or_create_by_name(params[:artist][:name])
 
     respond_to do |format|
       if @album.update_attributes(params[:album])
