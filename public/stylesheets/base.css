@@ -151,6 +151,7 @@ caption     { background: #eee; }
 	  line-height: 20px;
 	 	text-decoration: none;}
 
+
 	.header ul.dashboard li a:hover { color: #fff; background-color:#0c3b71; }
 
 	/* ---------- NAVIGATION --------------------------*/
@@ -169,6 +170,8 @@ caption     { background: #eee; }
 	-moz-border-radius-topright: .5em; -webkit-border-top-right-radius: .5em; }
 	.nav ul li a:hover { color: #0a396f; background-color: #fff; -moz-border-radius-topleft: .5em; -webkit-border-top-left-radius: .5em;
 	-moz-border-radius-topright: .5em; -webkit-border-top-right-radius: .5em; }
+	
+	.nav ul li.vote a { padding-bottom: .2em; background-color: orange; -moz-border-radius: 5px; -webkit-border-radius: 5px; }
 
 /* ---------- SEARCH --------------------------*/
 .nav form.search { margin-top: .35em; text-align: right; }

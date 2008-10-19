@@ -40,7 +40,7 @@
 			</div>
 		
 			<div class="span-24 nav">
-			    <ul class="span-13 append-5">
+			    <ul class="span-15 append-3">
 			        <li class="<%= 'current' if controller.controller_name == 'main' %>"><%= link_to "Home", root_path %></li>
 			
 					<li class="<%= 'current' if controller.controller_name == 'artists' %>"><%= link_to "Artists", artists_path %></li>
@@ -50,6 +50,8 @@
 			        <li class="<%= 'current' if controller.controller_name == 'songs' %>"><%= link_to "Songs", songs_path %></li>
 			
 				 	<li class="<%= 'current' if controller.controller_name == 'users' %>"><%= link_to "Community", users_path %></li>
+				
+					<li class="vote"><%= link_to "Vote For Us!",  "http://railsrumble.com/teams/the-unstable-isotopes" %></li>
 			    </ul>
 			
 				<% form_tag searches_path, :class => "span-6 last search" do  %>
