@@ -14,11 +14,12 @@ ActionController::Routing::Routes.draw do |map|
   map.open_id_create '/opencreate', :controller => "users", :action => "create", :requirements => { :method => :get }
   
   # Restful Authentication Resources
+  
   map.resources :users, :has_many => :lyrics
   map.resources :searches
-  map.resources :artists
-  map.resources :songs
-  map.resources :albums
+  map.resources :artists, :has_many => :albums
+  map.resources :songs, :has_one => :album
+  map.resources :albums, :has_many => :songs
   map.resources :lyrics
   map.resources :passwords
   map.resource :session

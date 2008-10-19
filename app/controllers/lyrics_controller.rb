@@ -7,6 +7,7 @@ class LyricsController < ApplicationController
     @lyrics = Lyric.find(:all)
     @artists = Artist.find :all, :limit => 5
     @albums = Album.find :all, :limit => 5
+    @songs = Song.find :all, :limit => 5
 
     respond_to do |format|
       format.html # index.html.erb
