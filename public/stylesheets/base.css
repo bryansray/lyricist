@@ -1,4 +1,4 @@
-.container { width: 970px; }
+.container { width: 970px; background: #041121 url("/images/microphone.png") no-repeat 150px 2px;}
 .span-24, div.span-24 { width: 950px; padding: 0 10px;}
 
 /* Typography
@@ -8,7 +8,7 @@
 body { 
 	font-size: 75%;
 	color: #222; 
-	background-color: #041121;
+	background: #041121;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	margin: 0;
 }
@@ -130,8 +130,7 @@ caption     { background: #eee; }
 
 
 /* ---------- HEADER --------------------------*/
-.header { 
-	background-color:#041121;
+.header {
 	margin-top: .5em; margin-bottom: 1em;
 }
 
