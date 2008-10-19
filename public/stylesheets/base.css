@@ -208,6 +208,9 @@ caption     { background: #eee; }
 	.content .lead h2 { margin-bottom: 0; font-size: 2em; color: #B1B1B1; text-transform: capitalize; }
 
 	.body form#new_artist,
+	.body form#new_album,
+	.body form.edit_album,
+	.body form.new_song,
 	.content .body .span-9 { margin-top: 1em; }
 	
 	p.numbers {text-align: center; font-size:1.5em; margin-bottom: 0;}

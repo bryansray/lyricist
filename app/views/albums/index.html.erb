@@ -6,8 +6,7 @@
 			<ul>
 				<% for album in @albums %>
 				  <li>
-				    <h2><%= link_to album.name, album %>
-				    <%= album.artist.name if album.artist %></h2>
+				    <h2><%= link_to album.name, album %> - <%= album.artist.name if album.artist %></h2>
 				  </li>
 				<% end %>
 			</ul>
