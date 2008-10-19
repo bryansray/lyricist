@@ -1,9 +1,9 @@
 <div class="span-8 mod login">
     <h3>Member already? Log In below</h3>
-    <p style="font-weight: bold; font-size: 1.5em; margin-bottom: .3em; text-align: right;"><a href="#" class="show_openid_form">OpenID Login</a></p>    
+    <p style="font-weight: bold; font-size: 1.5em; margin-bottom: .3em; text-align: right;"><a href="#" class="show_openid_form">Standard Login</a></p>
     
     <% form_tag session_path, :class => "basic" do %>
-        <fieldset id="standard_login" class="">
+        <fieldset id="standard_login" style="display: none;">
             <div class="clearfix">
            		<%= label_tag 'login', 'Username' %>
            		<%= text_field_tag 'login', @login %>
@@ -15,9 +15,9 @@
    			</div>
 		</fieldset>
 		
-		<fieldset id="openid_login" class="" style="display: none;">
+		<fieldset id="openid_login" class="">
 		    <div class="clearfix">
-    			<%= label_tag 'openid_url', 'or OpenID' %>
+    			<%= label_tag 'openid_url', 'OpenID URL' %>
                 <%= text_field_tag 'openid_url' %>
             </div>
         </fieldset>
