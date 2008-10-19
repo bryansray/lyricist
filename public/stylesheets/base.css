@@ -169,7 +169,7 @@ caption     { background: #eee; }
 		font-size: 12pt;
 	}*/
 	
-	.nav ul li { margin: 0 .25em 0 0; padding: .5em .25em 0 .25em; list-style-type: none; float: left; font-weight: bold; text-transform: uppercase; }
+	.nav ul li { margin: 0 .2em 0 0; padding: .5em 0 0 0; list-style-type: none; float: left; font-weight: bold; text-transform: uppercase; }
 	.nav ul li a { display: block; color: #fff; }
 	
 	.nav ul { /*width: 980px; margin: 0 auto;*/ margin: 0; font-size: 1.2em; }
@@ -181,7 +181,7 @@ caption     { background: #eee; }
 
 /* ---------- SEARCH --------------------------*/
 .nav form.search {
-	margin-top: .75em;
+	margin-top: .35em;
 	text-align: right;
 }
 
