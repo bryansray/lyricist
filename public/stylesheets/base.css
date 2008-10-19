@@ -463,10 +463,10 @@ div.content { background-color: #fff; min-height: 300px; padding-top: 2em; paddi
 
 /*MODULE FOR RIGHT RAIL*/
 div.rail .mod {background-color: #e1e1e1; padding: 1em;  }
-div.rail .mod.alt {background-color: #235389;}
-div.rail .mod.secondary {background-color: #9FE722;}
-div.rail .mod.login {background-color: #EBF7D9;}
-div.rail .mod.destroy {background-color: #ffc9be;}
+div.rail .mod.alt {background-color: #65AEF3; border-bottom:5px solid #65AEF3;}
+div.rail .mod.secondary {background-color: #9FE722; border-bottom:5px solid #9FE722;}
+div.rail .mod.login {background-color: #EBF7D9; border-bottom:5px solid #EBF7D9;}
+div.rail .mod.destroy {background-color: #ffc9be; border-bottom:5px solid #ffc9be;}
 
 div.rail .mod h3 { margin-bottom: 0; }
 div.rail ul { list-style: none; margin: 0; }
