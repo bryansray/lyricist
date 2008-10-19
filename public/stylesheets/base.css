@@ -192,7 +192,7 @@ caption     { background: #eee; }
 }
 	
 	/* ---------- INDEX - main content -------------------*/	
-	.main .content h2 { color: orange; text-transform: uppercase; font-weight: bold;}
+	.main .content h2 { text-transform: uppercase; font-weight: bold;}
 
 	/* ---------- INDEX - LEAD --------------------------*/
 	.lead {
@@ -210,7 +210,7 @@ caption     { background: #eee; }
 	.body form#new_artist,
 	.content .body .span-9 { margin-top: 1em; }
 	
-	p.numbers {text-align: center; font-size:1.5em; }
+	p.numbers {text-align: center; font-size:1.5em; margin-bottom: 0;}
 	p.numbers span { color: red; font-size: 1.5em; }
 	
 	/* ---------- USER -----------------------------------*/
