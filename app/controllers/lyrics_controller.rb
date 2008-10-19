@@ -46,9 +46,17 @@ class LyricsController < ApplicationController
   # POST /lyrics
   # POST /lyrics.xml
   def create
+    artist = Artist.find_or_create_by_name params[:artist][:name]
+    album = Album.find_or_create_by_name params[:album][:name]
+    song = Song.find_or_create_by_title params[:song][:title]
+    
+    song.album = album
+    song.artist = artist
+    
     @lyric = Lyric.new(params[:lyric])
     @lyric.owner = current_user
-
+    @lyric.song = song
+    
     respond_to do |format|
       if @lyric.save
         flash[:notice] = 'Lyric was successfully created.'

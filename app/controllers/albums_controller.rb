@@ -25,6 +25,7 @@ class AlbumsController < ApplicationController
   # GET /albums/new
   # GET /albums/new.xml
   def new
+    @artist  = Artist.find params[:artist_id] if params[:artist_id]
     @album = Album.new
 
     respond_to do |format|
