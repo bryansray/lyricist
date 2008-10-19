@@ -1,30 +1,28 @@
 <div class="span-16 body">
-<h1>Listing artists</h1>
+	<h1>Listing artists <%= link_to 'New artist', new_artist_path %></h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-  </tr>
+	<div class="mod artists">
+		<div class="bd">
+			<ul>
+			<% for artist in @artists %>
+				  <li>
+				    <h2><%= link_to artist.name, artist %></h2>
+				    <!-- <%#= link_to 'Edit', edit_album_path(album) %>
+				    <%#= link_to 'Destroy', album, :confirm => 'Are you sure?', :method => :delete %> -->
+				  </li>
+				<% end %>
+			</ul>
+		</div>
+		<div class="ft">
+			<%= will_paginate @albums %>
+			<p><%= link_to "#{image_tag 'feed-icon-14x14.png'} Subscribe to the RSS feed", formatted_artists_path(:rss), :class => "feed"  %></p>
+		</div>
+	</div>
 
-<% for artist in @artists %>
-  <tr>
-    <td><%= link_to artist.name, artist %></td>
-    <!-- <td><%#= link_to 'Edit', edit_artist_path(artist) %></td>
-    <td><%#= link_to 'Destroy', artist, :confirm => 'Are you sure?', :method => :delete %></td> -->
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New artist', new_artist_path %>
-
-<%= will_paginate @artists %>
-<p>
-  <%= link_to "#{image_tag 'feed-icon-14x14.png'} Subscribe to the RSS feed", formatted_artists_path(:rss), :class => "feed"  %>
-</p>
 </div>
 
 <div class="span-8 last rail">
-	<p>not sure what should go here but a place holder for now</p>
+	<div class="box">
+		<p>not sure what goes here but leaving some space</p>
+	</div>
 </div>

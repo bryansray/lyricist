@@ -1,27 +1,22 @@
-<div class="mod login">
+<div class="span-12 mod login">
     <h3>Member already? Log In below</h3>
     
     <% form_tag session_path, :class => "basic" do %>
-        <div class="textfields">
-            <div class="clearfix">
-        		<%= label_tag 'login', 'Username' %>
-        		<%= text_field_tag 'login', @login %>
-            </div>
-            
-            <div class="clearfix">
-    			<%= label_tag 'password' %>
-    			<%= password_field_tag 'password', nil %>
-            </div>
-            <div class="clearfix">
-                        <%= "or" %>
-            </div>
-            <div class="clearfix">
-                        <%= label_tag 'openid_url', 'OpenID' %>
-                        <%= text_field_tag 'openid_url' %>
-            </div>
-        </div>
+        <fieldset class="span-6">
+       		<%= label_tag 'login', 'Username' %>
+       		<%= text_field_tag 'login', @login %>
+
+           
+   			<%= label_tag 'password' %>
+   			<%= password_field_tag 'password', nil %>
+		</fieldset>
+		
+		<fieldset class="span-6 last">    
+			<%= label_tag 'openid_url', 'or OpenID' %>
+            <%= text_field_tag 'openid_url' %>
+        </fieldset>
         
-    	<div class="buttons clearfix">
+    	<div class="span-12 buttons">
     		<%= submit_tag 'Login', :class => "green", :style => "width: 150px" %>
     	    <%= link_to 'Forgot Password?', forgot_password_path %>
     	</div>

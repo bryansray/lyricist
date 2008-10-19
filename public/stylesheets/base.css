@@ -335,11 +335,6 @@ div.footer {
 
 .users.show .lyrics { padding: 0; }
 
-.lyrics .lyric {
-	margin: .5em 0;
-	padding: .3em;
-}
-
 .lyrics .lyric.odd {
 	background-color: #cecece;
 }
@@ -385,9 +380,9 @@ div.footer {
 }
 
 /* ---------- CONTENT --------------------------*/
-div.content { background-color: #fff; min-height: 300px; padding-top: 2em; padding-bottom: 5em;}
+div.content { background-color: #fff; min-height: 300px; padding-top: 2em; padding-bottom: 2em;}
 
-.content h1 { position: relative; padding-bottom: 10px; font-weight: bold; color: #666; border-bottom: 1px dotted #CECECE; }
+.content h1 { position: relative; padding-bottom: 10px; font-weight: bold; color: #666; border-bottom: 1px solid #CECECE; margin-bottom: 0;}
 .content h1 a { position: absolute; right: 0; font-size:.5em; top: 1em; }
 
 /*** PAGE TITLE ***/
@@ -429,19 +424,14 @@ div.mod div.hd {
 	padding-bottom: 6px;
 }
 
-div.mod div.hd h1 a {
-	font-size: 180%;
-	color: #c01a18;
-}
-
 div.mod div.bd ul {
 	list-style: none;
 	margin: 0;
 }
 
 div.mod div.bd ul li {
-	border-top: 1px dotted #e1e1e1;
-	padding: 6px 4px;
+	border-top: 1px solid #e1e1e1;
+	padding: 4px 5px;
 }
 
 div.mod div.bd ul li:hover {
@@ -449,8 +439,8 @@ div.mod div.bd ul li:hover {
 }
 
 div.mod div.bd h2 {
-	display: inline;
-	font-size: 140%;
+	margin-bottom: 0;
+	font-size: 1.2em;
 }
 
 div.mod div.bd h2 a{

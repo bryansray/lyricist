@@ -1,4 +1,4 @@
-<h2 class="title"><%= link_to @song.artist.name, @song.artist %> - <%= link_to @song.album.name, @song.album %> - <%= @song.title %></h2>
+<h1><%= link_to @song.artist.name, @song.artist %> - <%= link_to @song.album.name, @song.album %> - <%= @song.title %></h1>
 
 <% if @song.lyrics.empty? %>
     <p>This song does not currently have any lyrics. Why not get them started now?</p>

@@ -21,7 +21,7 @@
 		
 		<div id="container" class="container">
 			<div class="span-24 header">
-			    <p class="span-7 brand"><%= link_to "Lyricist<span>app</span>", root_path %></p>
+			    <p class="span-7 brand"><%= link_to "Lyricist", root_path %></p>
 			    <p class="span-11 tagline">you know the song, but what are the lyrics?</p>
     			
 
@@ -40,10 +40,14 @@
 			<div class="span-24 nav">
 			    <ul class="span-13 append-5">
 			        <li class="<%= 'current' if controller.controller_name == 'main' %>"><%= link_to "Home", root_path %></li>
+			
+					<li class="<%= 'current' if controller.controller_name == 'artists' %>"><%= link_to "Artists", artists_path %></li>
+			
+					<li class="<%= 'current' if controller.controller_name == 'albums' %>"><%= link_to "Albums", albums_path %></li>
 		        
-			        <li class="<%= 'current' if controller.controller_name == 'users' %>"><%= link_to "Community", users_path %></li>
-		        
-			        <li class="<%= 'current' if controller.controller_name == 'lyrics' %>"><%= link_to "Lyrics", lyrics_path %></li>
+			        <li class="<%= 'current' if controller.controller_name == 'lyrics' %>"><%= link_to "Songs", lyrics_path %></li>
+			
+				 	<li class="<%= 'current' if controller.controller_name == 'users' %>"><%= link_to "Community", users_path %></li>
 			    </ul>
 			
 				<% form_tag searches_path, :class => "span-6 last search" do  %>

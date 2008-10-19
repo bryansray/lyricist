@@ -1,9 +1,5 @@
 <h1>Listing songs</h1>
 
-<table>
-  <tr>
-  </tr>
-
 <% for song in @songs %>
   <tr>
     <td><%= link_to 'Show', song %></td>
@@ -12,7 +8,5 @@
   </tr>
 <% end %>
 </table>
-
-<br />
 
 <%= link_to 'New song', new_song_path %>
