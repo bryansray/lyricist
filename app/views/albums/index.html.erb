@@ -7,16 +7,16 @@
 	  <tr>
 	    <th>Name</th>
 	    <th>Artist</th>
-		<th>Edit</th>
-		<th>Destroy</th>
+		<!-- <th>Edit</th>
+		<th>Destroy</th> -->
 	  </tr>
 
 	<% for album in @albums %>
 	  <tr>
-	    <td><%= h(link_to(album.name), album)) %></td>
+	    <td><%= link_to( h(album.name), albums_path) %></td>
 	    <td><%= album.artist.name if album.artist %></td>
-	    <td><%= link_to 'Edit', edit_album_path(album) %></td>
-	    <td><%= link_to 'Destroy', album, :confirm => 'Are you sure?', :method => :delete %></td>
+	    <!-- <td><%#= link_to 'Edit', edit_album_path(album) %></td>
+	    <td><%#= link_to 'Destroy', album, :confirm => 'Are you sure?', :method => :delete %></td> -->
 	  </tr>
 	<% end %>
 	</table>
