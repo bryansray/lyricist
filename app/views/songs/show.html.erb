@@ -1,7 +1,17 @@
-<h1><%= link_to @song.artist.name, @song.artist %> - <%= link_to @song.album.name, @song.album %> - <%= @song.title %></h1>
+<div class="span-16 body">
+<h1><%= link_to @song.artist.name, @song.artist %> > 
+	<%= link_to @song.album.name, @song.album %> > 
+	<%= @song.title %>
+	<%= link_to 'Edit', edit_song_path(@song) %>
+	<%= link_to 'Back', songs_path %>
+</h1>
 
 <% if @song.lyrics.empty? %>
     <p>This song does not currently have any lyrics. Why not get them started now?</p>
 <% end %>
-<%= link_to 'Edit', edit_song_path(@song) %> |
-<%= link_to 'Back', songs_path %>
+</div>
+
+<div class="span-8 last rail">
+	<p>area to populate</p>
+</div>
+
