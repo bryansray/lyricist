@@ -1,5 +1,41 @@
 <h2 class="title"><%= link_to @album.artist.name, @album.artist %> - <%= @album.name %></h2>
-<p>By <%= @album.artist.name if @album.artist %></p>
 
-<%= link_to 'Edit', edit_album_path(@album) %> |
-<%= link_to 'Back', albums_path %>
+<div class="span-17">
+    <div class="container">
+        <div class="span-9">    
+            Need something to put in here
+        </div>
+
+        <div class="span-8 last">    
+            <div class="span-8 last">
+                <div class="box list">
+                    <h3>Songs</h3>
+                    <div class="items">
+                        <% @album.songs.each do |song| %>
+                            <div class="song" id="song-<%= song.id %>">
+                                <%= link_to song.title, song_path(song) %>
+                            </div>
+                        <% end %>
+                    </div>
+
+                    <div class="actions">
+                        <%= link_to "View All", songs_path %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="box">
+        <h3>Latest Lyrics</h3>
+    </div>
+</div>
+
+<div class="span-7 last rail">
+	<div class="box gray" style="min-height: 500px">
+    	<p>most active songs</p>
+    	<p>top songs lyrics</p>
+    	<p>sidebar goes here</p>
+    </div>
+	
+</div>
