@@ -1,15 +1,22 @@
-<div class="span-18">
+<div class="span-18 body">
+
 <h1>Listing songs <%= link_to 'New song', new_song_path %></h1>
 
-<% for song in @songs %>
-  
-	<li>
-		<h2><%= link_to song.name, songs %></h2>
-		<!-- 
-		    <#%= link_to 'Show', song %> | <#%= link_to 'Edit', edit_song_path(song) %> | <#%= link_to 'Destroy', song, :confirm => 'Are you sure?', :method => :delete %>
-		 -->
-	</li>
-
-<% end %>
-
-
+<div class="mod artists">
+	<div class="bd">
+		<ul>
+		<% for song in @songs %>
+			<li>
+				<h2><%= link_to song.title, song %></h2>
+				<!-- 
+				    <%#= link_to 'Show', song %> | <%#= link_to 'Edit', edit_song_path(song) %> | <%#= link_to 'Destroy', song, :confirm => 'Are you sure?', :method => :delete %>
+				 -->
+			</li>
+			<% end %>
+		</ul>
+	</div>
+	<div class="ft">
+		<%= will_paginate @songs %>
+		<p><%= link_to "#{image_tag 'feed-icon-14x14.png'} Subscribe to the RSS feed", formatted_songs_path(:rss), :class => "feed"  %></p>
+	</div>
+</div>

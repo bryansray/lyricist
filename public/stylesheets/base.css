@@ -224,7 +224,7 @@ caption     { background: #eee; }
 		margin-top: 1em;
 	}
 
-	.lead h1 { color: #4E5963; }
+	.lead h1 { color: #4E5963; margin-bottom: 1em; }
 	.lead h2 { margin-bottom: 0; font-size: 2em; color: #B1B1B1; }
 
 	/* ---------- USER --------------------------*/
