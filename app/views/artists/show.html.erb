@@ -1,6 +1,6 @@
-<h1><%= @artist.name %></h1>
+<div class="span-16 body">
+	<h1><%= @artist.name %></h1>
 
-<div class="span-18">
     <div class="span-9">    
         <%= render :partial => "shared/list_box", :locals => { :heading => "Albums", :records => @artist.albums } %>
     </div>

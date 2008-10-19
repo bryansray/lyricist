@@ -1,25 +1,23 @@
-<h2 class="title"><%= link_to @album.artist.name, @album.artist %> - <%= @album.name %></h2>
+<h1><%= link_to @album.artist.name, @album.artist %> </h1>
 
-<div class="span-17">
-    <div class="container">
+<div class="span-18">
         <div class="span-9">    
-            Need something to put in here
+            <h2><%= @album.name %></h2>
+			<p>information pulled in from last.fm</p>
         </div>
 
-        <div class="span-8 last">    
-            <div class="span-8 last">
+        <div class="span-9 last">    
                 <%= render :partial => "shared/list_box", :locals => { :heading => "Songs", :records => @album.songs } %>
-            </div>
         </div>
     </div>
 
 </div>
 
-<div class="span-7 last rail">
-	<div class="box gray" style="min-height: 500px">
-    	<p>most active songs</p>
-    	<p>top songs lyrics</p>
-    	<p>sidebar goes here</p>
-    </div>
+<div class="span-6 last rail">
+	<ul class="mod">
+    	<li>most active songs</li>
+    	<li>top songs lyrics</li>
+    	<li>sidebar goes here</li>
+    </ul>
 	
 </div>

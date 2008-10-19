@@ -1,3 +1,4 @@
+<div class="span-16 body">
 <h1>New album</h1>
 
 <% form_for(@album) do |f| %>
@@ -19,5 +20,10 @@
     <%= f.submit "Create" %>
   </p>
 <% end %>
+</div>
 
-<%= link_to 'Back', albums_path %>
+<div class="span-8 last rail">
+	<ul class="mod">
+		<li><%= link_to 'Back', albums_path %></li>
+	</ul>
+</div>
