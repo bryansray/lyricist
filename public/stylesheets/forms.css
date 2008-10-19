@@ -22,7 +22,15 @@ form.bigform .textfields label { display: block; float: left; width: 230px; font
 form.bigform .textfields input, form.bigform .textfields textarea { display: block; float: left; width: 390px; padding: 4px; font-size: 14px; }
 
 /*** HOME LOGIN FORM ***/
-/*.main .login { border: 1px solid #d0e7d1; color: #3d9655; background-color: #EBF7D9; margin: 10px auto;	padding: 5px; -moz-border-radius: 4px; -webkit-border-radius: 4px; }*/
+.main .login { 
+	border: 1px solid #d0e7d1; 
+	color: #3d9655; 
+	background-color: #EBF7D9; 
+	-moz-border-radius: 4px; 
+	-webkit-border-radius: 4px; 
+	padding: 10px;
+}
+.main .login form div.clearfix { margin: 5px 0;}
 .main .login form .buttons { margin-top: 1em; text-align: left; }
 .main .login form label { float: left; width: 80px; font-size: 13px; font-weight: bold; }
 .main .login form input { float: right;	padding: 2px; width: 132px; }

@@ -3,17 +3,11 @@
 	    <h2>Yea, we were too!</h2>
 	</div>
 
-    <div class="span-12">
+    <div class="span-15">
         <h2>What is Lyricist?</h2>
         
         <p>Lyricists is a <strong>totally free</strong> and <strong>extremely simple</strong> community based Lyrics site. We allow our members to create new lyrics, modify existing lyrics, and discuss the meaning of the lyrics all without having advertisements or popups crammed down your throat like all the other circa 1995 lyrics sites out there. </p>
         
-    </div>
-
-    <div class="span-12 last rail">
-	
-		<%= render :partial => '/shared/login_box' unless logged_in? %>
-		
         <div class="span-6 popular_lyrics">
             <h3>Most Popular Lyrics</h3>
             
@@ -51,4 +45,11 @@
                 <li>Guster - Happier</li>
             </ul>
         </div>	
+        
+    </div>
+
+    <div class="span-9 last rail">
+	
+		<%= render :partial => '/shared/login_box' unless logged_in? %>
+		
     </div>
