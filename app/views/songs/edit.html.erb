@@ -1,31 +1,37 @@
-<h1>Editing song</h1>
+<div class="span-16 body">
+	<h1>Editing song</h1>
 
-<% form_for(@song) do |f| %>
-  <%= f.error_messages %>
+	<% form_for(@song) do |f| %>
+	  <%= f.error_messages %>
 
-  <p>
-    <%= f.label :song_title %>
-    <%= f.text_field :title %>
-  </p>
+	  <p>
+	    <%= f.label :song_title %>
+	    <%= f.text_field :title %>
+	  </p>
 
-  <p>
-    <%= f.label :artist_name %>
-    <% fields_for @song.artist || Artist.new do |artist| %>
-      <%= artist.text_field :name %>
-    <% end %>
-  </p>
+	  <p>
+	    <%= f.label :artist_name %>
+	    <% fields_for @song.artist || Artist.new do |artist| %>
+	      <%= artist.text_field :name %>
+	    <% end %>
+	  </p>
 
-  <p>
-    <%= f.label :album_name %>
-    <% fields_for @song.album || Artist.new do |album| %>
-      <%= album.text_field :name %>
-    <% end %>
-  </p>
+	  <p>
+	    <%= f.label :album_name %>
+	    <% fields_for @song.album || Artist.new do |album| %>
+	      <%= album.text_field :name %>
+	    <% end %>
+	  </p>
 
-  <p>
-    <%= f.submit "Update" %>
-  </p>
-<% end %>
+	  <p>
+	    <%= f.submit "Update" %>
+	  </p>
+	<% end %>
+</div>
 
-<%= link_to 'Show', @song %> |
-<%= link_to 'Back', songs_path %>
+<div class="span-8 last rail">
+	<%= render :partial => "shared/generic_module" %>
+	
+	<%= link_to 'Show', @song %> |
+	<%= link_to 'Back', songs_path %>
+</div>
