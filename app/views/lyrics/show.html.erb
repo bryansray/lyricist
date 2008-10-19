@@ -1,7 +1,7 @@
 <div class="span-16 body">
-    <h1>Artist - Album</h1>
+    <h1><%= @lyric.song.artist %> - <%= @lyric.song.album %></h1>
 	<h2>
-		Song Title
+		<%= @lyric.song %>
 		<% if logged_in? and @lyric.owner == current_user %>
     	    <span><%= link_to 'Edit', edit_user_lyric_path(current_user, @lyric) %></span>
     	<% end %>
@@ -13,6 +13,15 @@
 
 </div>
 
-<div class="span-8 last rail">
-	<%= render :partial => "shared/generic_module" %>
+<div class="span-7 last rail">
+    <div class="mod">
+        <div class="bd">
+            <ul>
+        		<% if logged_in? and @lyric.owner == current_user %>
+                    <li><%= link_to "Edit Lyrics", edit_lyric_path(@lyric) %>
+                <% end %>
+			</ul>
+        </div>
+    </div>
+
 </div>

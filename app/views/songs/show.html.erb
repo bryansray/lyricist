@@ -4,6 +4,8 @@
 
     <% if @song.lyrics.empty? %>
         <p>This song does not currently have any lyrics. Why not get them started now?</p>
+    <% else %>
+        <%= @song.lyrics.first.to_html %>
     <% end %>
 </div>
 
@@ -11,7 +13,7 @@
     <div class="mod">
         <div class="bd">
             <ul>
-				<li><%= link_to "Create new lyrics", new_lyric_path %></li>
+				<li><%= link_to "Create new lyrics", new_artist_album_song_lyric_path(@song.artist, @song.album, @song) %></li>
             	<li><%= link_to "Edit this song", edit_song_path(@song) %></li>
 			</ul>
         </div>

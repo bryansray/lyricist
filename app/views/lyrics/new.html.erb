@@ -6,17 +6,17 @@
     <div class="textfields">
         <div class="clearfix">
             <label>Artist</label>
-            <input type="text" id="artist_name" name="artist[name]" />
+            <input type="text" id="artist_name" name="artist[name]" value="<%= @artist.name if @artist %>" />
         </div>
         
         <div class="clearfix">
             <label>Album</label>
-            <input type="text" id="album_name" name="album[name]" />
+            <input type="text" id="album_name" name="album[name]" value="<%= @album.name if @album %>"/>
         </div>
 
         <div class="clearfix">
             <label>Title</label>
-            <input type="text" id="song_title" name="song[title]" />
+            <input type="text" id="song_title" name="song[title]" value="<%= @song.title if @song %>" />
         </div>
     </div>
     
