@@ -4,7 +4,7 @@
             <img src="/images/users/person_thumb.gif" />
 
             <div class="span-4 last">
-                <h3><%= link_to user.name, user_path(user) %></h3>
+                <h3><%= link_to user.pretty_name, user_path(user) %></h3>
                 
                 <div class="statistics">
                     <p>Lyrics: <%= user.lyrics.size %></p>

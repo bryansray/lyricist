@@ -1,6 +1,10 @@
 require 'digest/sha1'
 
 class User < ActiveRecord::Base
+  def pretty_name
+    name.blank? ? (login.blank? ? identity_url : login) : name
+  end
+
   include Authentication
   include Authentication::ByPassword
   include Authentication::ByCookieToken
