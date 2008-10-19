@@ -1,37 +1,31 @@
 <div class="span-16 body">
 	<h1>Editing song</h1>
-
-	<% form_for(@song) do |f| %>
-	  <%= f.error_messages %>
-
-	  <p>
-	    <%= f.label :song_title %>
-	    <%= f.text_field :title %>
-	  </p>
-
-	  <p>
-	    <%= f.label :artist_name %>
-	    <% fields_for @song.artist || Artist.new do |artist| %>
-	      <%= artist.text_field :name %>
-	    <% end %>
-	  </p>
-
-	  <p>
-	    <%= f.label :album_name %>
-	    <% fields_for @song.album || Artist.new do |album| %>
-	      <%= album.text_field :name %>
-	    <% end %>
-	  </p>
-
-	  <p>
-	    <%= f.submit "Update" %>
-	  </p>
-	<% end %>
-</div>
-
-<div class="span-8 last rail">
-	<%= render :partial => "shared/generic_module" %>
-	
-	<%= link_to 'Show', @song %> |
-	<%= link_to 'Back', songs_path %>
+    <% form_for(@song, :html => {:class => "bigform"} ) do |f| %>
+      <%= f.error_messages %>
+        <div class="textfields">
+            <div class="clearfix">
+                <%= f.label :song_title %>
+                <%= f.text_field :title %>
+            </div>
+        
+            <div class="clearfix">
+                <%= f.label :artist_name %>
+                <% fields_for @song.artist || Artist.new do |artist| %>
+                  <%= artist.text_field :name %>
+                <% end %>        
+            </div>
+        
+            <div class="clearfix">
+                <%= f.label :album_name %>
+                <% fields_for @song.album || Artist.new do |album| %>
+                  <%= album.text_field :name %>
+                <% end %>        
+            </div>
+        </div>
+    
+        <div class="buttons span-16">
+            <%= link_to "Cancel", @song %> | 
+            <%= f.submit "Update", :class => "green" %>
+        </div>
+    <% end %>
 </div>
