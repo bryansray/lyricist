@@ -1,2 +1,16 @@
-<h1>Artists#new</h1>
-<p>Find me in app/views/artists/new.html.erb</p>
+<h1>New artist</h1>
+
+<% form_for(@artist) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.text_field :name %>
+  </p>
+
+
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', artists_path %>
