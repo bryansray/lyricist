@@ -1,18 +1,16 @@
-<div class="span-17">
-    <div class="container">
-        <div class="span-9">    
-            <%= render :partial => "shared/list_box", :locals => { :heading => "Popular Songs", :records => @songs } %>
-        </div>
+<div class="span-16">
+      <div class="span-8">    
+          <%= render :partial => "shared/list_box", :locals => { :heading => "Popular Songs", :records => @songs } %>
+      </div>
 
-        <div class="span-8 last">    
-            <%= render :partial => "shared/list_box", :locals => { :heading => "Popular Artists", :records => @artists } %>
-            <%= render :partial => "shared/list_box", :locals => { :heading => "Popular Albums", :records => @albums } %>
-        </div>
-    </div>
+      <div class="span-8 last">    
+          <%= render :partial => "shared/list_box", :locals => { :heading => "Popular Artists", :records => @artists } %>
+          <%= render :partial => "shared/list_box", :locals => { :heading => "Popular Albums", :records => @albums } %>
+      </div>
 </div>
 
-<div class="span-7 last rail">
-	<div class="box gray" style="min-height: 500px">
+<div class="span-8 last rail">
+	<div class="box gray">
     	<p>most active songs</p>
     	<p>top songs lyrics</p>
     	<p>sidebar goes here</p>

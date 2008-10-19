@@ -1,23 +1,21 @@
-<h2 class="title"><%= @artist.name %></h2>
+<h1><%= @artist.name %></h1>
 
-<div class="span-17">
-    <div class="container">
-        <div class="span-8">    
-            <%= render :partial => "shared/list_box", :locals => { :heading => "Albums", :records => @artist.albums } %>
-        </div>
-
-        <div class="span-8 last">
-            <%= render :partial => "shared/list_box", :locals => { :heading => "Songs", :records => @artist.songs } %>
-        </div>
+<div class="span-18">
+    <div class="span-9">    
+        <%= render :partial => "shared/list_box", :locals => { :heading => "Albums", :records => @artist.albums } %>
     </div>
 
-    <div class="box">
+    <div class="span-9 last">
+        <%= render :partial => "shared/list_box", :locals => { :heading => "Songs", :records => @artist.songs } %>
+    </div>
+
+    <!-- <div class="box">
         <h3>Latest Lyrics</h3>
-    </div>
+    </div> -->
 </div>
 
-<div class="span-7 last rail">
-	<div class="box gray" style="min-height: 500px">
+<div class="span-6 last rail">
+	<div class="box gray">
     	<p>most active songs</p>
     	<p>top songs lyrics</p>
     	<p>sidebar goes here</p>
