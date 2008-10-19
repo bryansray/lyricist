@@ -1,4 +1,4 @@
-<h1><%= @album.name %></h1>
+<h2 class="title"><%= link_to @album.artist.name, @album.artist %> - <%= @album.name %></h2>
 <p>By <%= @album.artist.name if @album.artist %></p>
 
 <%= link_to 'Edit', edit_album_path(@album) %> |

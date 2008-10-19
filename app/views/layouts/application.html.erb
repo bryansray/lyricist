@@ -46,9 +46,7 @@
 		        
 			        <li class="<%= 'current' if controller.controller_name == 'users' %>"><%= link_to "Community", users_path %></li>
 		        
-			        <li class="<%= 'current' if controller.controller_name == 'lyrics' %>">
-			            <%= link_to "Lyrics", lyrics_path %>
-			        </li>
+			        <li class="<%= 'current' if controller.controller_name == 'lyrics' %>"><%= link_to "Lyrics", lyrics_path %></li>
 			    </ul>
 			
 				<% form_tag searches_path, :class => "span-6 last search" do  %>

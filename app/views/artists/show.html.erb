@@ -20,7 +20,20 @@
         </div>
 
         <div class="span-8 last">
-            Misc
+            <div class="box list">
+                <h3>Songs</h3>
+                <div class="items">
+                    <% @artist.songs.each do |song| %>
+                        <div class="song" id="album-<%= song.id %>">
+                            <%= link_to song.title, song_path(song) %>
+                        </div>
+                    <% end %>
+                </div>
+                
+                <div class="actions">
+                    <%= link_to "View All", songs_path %>
+                </div>
+            </div>
         </div>
     </div>
 

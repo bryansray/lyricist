@@ -1,3 +1,4 @@
+<h2 class="title"><%= link_to @song.artist.name, @song.artist %> - <%= link_to @song.album.name, @song.album %> - <%= @song.title %></h2>
 
 <%= link_to 'Edit', edit_song_path(@song) %> |
 <%= link_to 'Back', songs_path %>
