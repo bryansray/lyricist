@@ -240,6 +240,10 @@ caption     { background: #eee; }
 	.biography .image { text-align: center;	}
 	.biography .image img {	border: 1px solid #cecece; padding: 2px; }
 	.biography .statement {	font-style: italic;	font-size: 11px; }
+
+
+
+
 	
 .pagination li{
 	border:0; margin:0; padding:0;
@@ -253,7 +257,7 @@ caption     { background: #eee; }
 	margin-right:2px;
 }
 
-.pagination .previous-off,
+.pagination .disabled,
 .pagination .next-off {
 	color:#888888
 	display:block;
@@ -262,14 +266,15 @@ caption     { background: #eee; }
 	padding:3px 4px;
 }
 
-.pagination .next a,
-.pagination .previous a {
+.pagination .next_page a,
+.pagination .prev_page a {
 	font-weight:bold;
 	border:solid 1px #FFFFFF;
 }
 
-.pagination .active{
-	color:#00000
+.pagination .gap,
+.pagination .current{
+	color:#000000;
 	font-weight:bold;
 	display:block;
 	float:left;
@@ -381,7 +386,8 @@ div.footer {
 /* ---------- CONTENT --------------------------*/
 div.content { background-color: #fff; min-height: 300px; padding-top: 2em; padding-bottom: 5em;}
 
-.content h1 { padding-bottom: 10px; font-weight: bold; color: #666; border-bottom: 1px dotted #CECECE; }
+.content h1 { position: relative; padding-bottom: 10px; font-weight: bold; color: #666; border-bottom: 1px dotted #CECECE; }
+.content h1 a { position: absolute; right: 0; font-size:.5em; top: 1em; }
 
 /*** PAGE TITLE ***/
 body .content > .title {
@@ -404,3 +410,81 @@ body .content > .title {
 .box.list .items a:hover {
 	border: 1px solid #666;
 }
+
+
+
+
+
+
+div.mod {
+	border-bottom: 5px solid #e1e1e1;
+	margin-bottom: 3em;
+	padding-bottom: 1em;
+	-moz-border-radius: 1em;
+	-webkit-border-radius: 1em;
+}
+
+div.mod div.hd {
+	padding-bottom: 6px;
+}
+
+div.mod div.hd h1 a {
+	font-size: 180%;
+	color: #c01a18;
+}
+
+div.mod div.bd ul {
+	list-style: none;
+	margin: 0;
+}
+
+div.mod div.bd ul li {
+	border-top: 1px dotted #e1e1e1;
+	padding: 6px 4px;
+}
+
+div.mod div.bd ul li:hover {
+	background: #fafafa;
+}
+
+div.mod div.bd h2 {
+	display: inline;
+	font-size: 140%;
+}
+
+div.mod div.bd h2 a{
+	text-decoration: none;
+}
+
+div.mod div.ft {
+	border-top: 1px dotted #e1e1e1;
+	padding: 10px 4px 0 4px;
+}
+
+div.mod div.ft p {
+	font-size: 110%;
+	text-align: right;
+	margin-bottom: 0;
+}
+
+div.mod div.ft p a.feed {
+	color: #949494;
+	text-decoration: none;
+}
+
+div.mod div.ft p a.feed:hover {
+	color: #666;
+}
+
+div.mod div.ft p a.feed img {
+	margin-right: 2px;
+	vertical-align: text-bottom;
+	float: none;
+	margin:0;
+}
+
+
+
+
+
+
