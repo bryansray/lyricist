@@ -299,8 +299,8 @@ caption     { background: #eee; }
 
 /* ---------- FOOTER --------------------------*/
 div.footer { 
-	background-color: #f1f1f1;
-	color: #7e89a2;
+	background-color: #235389;
+	color: #6691BE;
 	margin-bottom: 3em;
 	padding-top: 2em;
 	padding-bottom: 2em;
@@ -308,15 +308,20 @@ div.footer {
 	-moz-border-radius-bottomright: 1em; -webkit-border-bottom-right-radius: 1em;
 }
 
-.footer ul {
+.footer ul.box {
 	list-style-image: none;
 	list-style-position: outside;
 	list-style-type: none;
-	margin:0;
+	margin: 0 .85em;
+	height: 175px;
+	background-color: #235389;
+	border: 1px solid #456890;
 }
 
+.footer ul li h3 { color: #fff; padding-bottom: .3em; text-transform: uppercase; font-weight:normal; font-size: 1em; border-bottom: 1px solid #456890; }
+
 .footer ul li a {
-	color: #7E89A2;
+	color: #6691BE;
 }
 
 
