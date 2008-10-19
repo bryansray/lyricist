@@ -1,15 +1,15 @@
-<div class="users">
+<ul class="users">
     <% @users.each do |user| %>
-        <div class="user preview" id="user-<%= user.id %>">
+        <li class="user preview" id="user-<%= user.id %>">
             <img src="/images/users/person_thumb.gif" />
 
-            <div class="span-4 last">
+            <div class="span-2">
                 <h3><%= link_to user.pretty_name, user_path(user) %></h3>
                 
                 <div class="statistics">
                     <p>Lyrics: <%= user.lyrics.size %></p>
                 </div>
             </div>
-        </div>
+        </li>
     <% end %>
-</div>
+</ul>
