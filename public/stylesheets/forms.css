@@ -16,7 +16,6 @@ form.bigform .textarea label {
 form.bigform .textarea textarea {
 	display: block;
 	width: 598px;
-	margin-left: 3em;
 }
 form.bigform .textfields label { display: block; float: left; width: 230px; font-size: 17px; font-weight: bold; line-height: 27px; }
 form.bigform .textfields input, form.bigform .textfields textarea { display: block; float: left; width: 390px; padding: 4px; font-size: 14px; }
@@ -27,7 +26,7 @@ form.bigform .textfields input, form.bigform .textfields textarea { display: blo
 	color: #3d9655; 
 	background-color: #EBF7D9; 
 	-moz-border-radius: 4px; 
-	-webkit-border-radius: 4px; 
+	-webkit-border-radius: 4px;
 	padding: 10px;
 }
 .main .login form div.clearfix { margin: 5px 0;}

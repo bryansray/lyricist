@@ -15,18 +15,17 @@
 		<div class="ft">
 			<%= will_paginate @albums %>
 			<p>
-        <%= link_to "#{image_tag 'feed-icon-14x14.png'} Subscribe to the RSS feed", formatted_albums_path(:rss), :class => "feed"  %>
-      </p>
+                <%= link_to "#{image_tag 'feed-icon-14x14.png'} Subscribe to the RSS feed", formatted_albums_path(:rss), :class => "feed"  %>
+            </p>
 		</div>
 	</div>
 
 </div>
 
 <div class="span-8 last rail">
-	<%= render :partial => "shared/generic_module" %>
-	
-	<ul class="mod">
-		<li><%= link_to 'Edit', edit_album_path(album) %></li>
-	    <!-- <li><%#= link_to 'Destroy', album, :confirm => 'Are you sure?', :method => :delete %></li> -->
-	</ul>
+    <div class="mod">
+    	<div class="bd">
+    	    <%= link_to 'Edit', edit_album_path(album) %>
+    	</div>
+    </div>
 </div>

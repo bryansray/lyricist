@@ -1,6 +1,6 @@
 <div class="span-16 body">
 
-<h1>Listing songs <%= link_to 'New song', new_song_path %></h1>
+<h1>Listing Songs</h1>
 
 	<div class="mod artists">
 		<div class="bd">
@@ -8,13 +8,11 @@
 			<% for song in @songs %>
 				<li>
 					<h2><%= link_to song.title, song %></h2>
-					<!-- 
-					    <%#= link_to 'Show', song %> | <%#= link_to 'Edit', edit_song_path(song) %> | <%#= link_to 'Destroy', song, :confirm => 'Are you sure?', :method => :delete %>
-					 -->
 				</li>
-				<% end %>
+			<% end %>
 			</ul>
 		</div>
+		
 		<div class="ft">
 			<%= will_paginate @songs %>
 			<p><%= link_to "#{image_tag 'feed-icon-14x14.png'} Subscribe to the RSS feed", formatted_songs_path(:rss), :class => "feed"  %></p>
@@ -24,5 +22,11 @@
 </div>
 
 <div class="span-8 last rail">
+    <div class="mod">
+        <div class="actions">
+            <%= link_to "Create a new song", new_song_path %>
+        </div>
+    </div>
+    
 	<%= render :partial => "shared/generic_module" %>
 </div>
