@@ -1,29 +1,27 @@
 <div class="span-16 body">
-<h1>New album</h1>
+    <h1>New album</h1>
 
-<% form_for(@album) do |f| %>
-  <%= f.error_messages %>
+    <% form_for(@album, :html => { :class => "bigform" }) do |f| %>
+        <%= f.error_messages %>
+    
+        <div class="textfields">
+            <div class="clearfix">
+                <%= f.label :album_name %>
+                <%= f.text_field :name %>            
+            </div>
+        
+            <div class="clearfix">
+                <%= f.label :artist_name %>
+                <% fields_for :artist do |artist| %>
+                  <%= artist.text_field :name %>
+                <% end %>
+            </div>
+        </div>
+    
+        <div class="buttons" style="text-align: left;">
+            <%= f.submit "Create", :class => "green" %> | 
+            <%= link_to "Cancel", albums_path %>
+        </div>
 
-  <p>
-    <%= f.label :album_name %>
-    <%= f.text_field :name %>
-  </p>
-
-  <p>
-    <%= f.label :artist_name %>
-    <% fields_for :artist do |artist| %>
-      <%= artist.text_field :name %>
     <% end %>
-  </p>
-
-  <p>
-    <%= f.submit "Create" %>
-  </p>
-<% end %>
-</div>
-
-<div class="span-8 last rail">
-	<ul class="mod">
-		<li><%= link_to 'Back', albums_path %></li>
-	</ul>
 </div>

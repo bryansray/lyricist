@@ -13,10 +13,9 @@
 </div>
 
 <div class="span-8 last rail">
-	<ul class="mod">
-    	<li>most active songs</li>
-    	<li>top songs lyrics</li>
-    	<li>sidebar goes here</li>
-    </ul>
-	
+    <div class="mod">
+    	<div class="bd">
+    	    <%= link_to "New #{@album.artist} Album", new_artist_album_path(@album.artist) %>
+    	</div>
+    </div>
 </div>
