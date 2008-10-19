@@ -1,4 +1,4 @@
-<div class="span-18 body">
+<div class="span-16 body">
 
 <h1>Listing songs <%= link_to 'New song', new_song_path %></h1>
 
@@ -19,4 +19,8 @@
 		<%= will_paginate @songs %>
 		<p><%= link_to "#{image_tag 'feed-icon-14x14.png'} Subscribe to the RSS feed", formatted_songs_path(:rss), :class => "feed"  %></p>
 	</div>
+</div>
+
+<div class="span-6 last rail">
+	<p>placeholder for now</p>
 </div>

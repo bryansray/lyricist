@@ -9,27 +9,10 @@
         <div class="span-8 last">    
             <div class="span-8 last">
                 <%= render :partial => "shared/list_box", :locals => { :heading => "Songs", :records => @album.songs } %>
-                <div class="box list">
-                    <h3>Songs</h3>
-                    <div class="items">
-                        <% @album.songs.each do |song| %>
-                            <div class="song" id="song-<%= song.id %>">
-                                <%= link_to song.title, song_path(song) %>
-                            </div>
-                        <% end %>
-                    </div>
-
-                    <div class="actions">
-                        <%= link_to "View All", songs_path %>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
 
-    <div class="box">
-        <h3>Latest Lyrics</h3>
-    </div>
 </div>
 
 <div class="span-7 last rail">
