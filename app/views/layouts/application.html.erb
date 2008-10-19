@@ -42,13 +42,11 @@
 		
 			<div class="span-24 nav">
 			    <ul class="span-13 append-5">
-			        <li class="current"><%= link_to "Home", root_path %></li>
+			        <li class="<%= 'current' if controller.controller_name == 'main' %>"><%= link_to "Home", root_path %></li>
 		        
-    			        <li><%= link_to "Community", users_path %>
-    			            <!-- <ul><li><%#= link_to "Members", users_path %></li></ul> -->
-    			        </li>
+			        <li class="<%= 'current' if controller.controller_name == 'users' %>"><%= link_to "Community", users_path %></li>
 		        
-			        <li>
+			        <li class="<%= 'current' if controller.controller_name == 'lyrics' %>">
 			            <%= link_to "Lyrics", lyrics_path %>
 			        </li>
 			    </ul>
