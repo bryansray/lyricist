@@ -30,6 +30,9 @@ class LyricsController < ApplicationController
   # GET /lyrics/new
   # GET /lyrics/new.xml
   def new
+    @artist = Artist.find params[:artist_id] if params[:artist_id]
+    @album = Album.find params[:album_id] if params[:album_id]
+    @song = Song.find params[:song_id] if params[:song_id]
     @lyric = Lyric.new
 
     respond_to do |format|
@@ -60,7 +63,7 @@ class LyricsController < ApplicationController
     respond_to do |format|
       if @lyric.save
         flash[:notice] = 'Lyric was successfully created.'
-        format.html { redirect_to @lyric }
+        format.html { redirect_to song }
         format.xml  { render :xml => @lyric, :status => :created, :location => @lyric }
       else
         format.html { render :action => "new" }

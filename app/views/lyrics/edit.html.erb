@@ -7,17 +7,17 @@
     <div class="textfields">
         <div class="clearfix">
             <label>Artist</label>
-            <input type="text" />
+            <input type="text" id="artist_name" name="artist[name]" value="<%= @lyric.song.artist.name if @lyric.song.artist %>" />
         </div>
         
         <div class="clearfix">
             <label>Album</label>
-            <input type="text" />
+            <input type="text" id="album_name" name="album[name]" value="<%= @lyric.song.album.name if @lyric.song.album %>"/>
         </div>
 
         <div class="clearfix">
             <label>Title</label>
-            <input type="text" />
+            <input type="text" id="song_title" name="song[title]" value="<%= @lyric.song.title if @lyric.song %>" />
         </div>
     </div>
     
@@ -29,7 +29,7 @@
     </div>
     
     <div class="buttons clearfix">
-        <%= link_to "Cancel", lyrics_path %> | <%= f.submit "Create", :class => "green", :style => "width: 150px" %>
+        <%= link_to "Cancel", lyrics_path %> | <%= f.submit "Update", :class => "green", :style => "width: 150px" %>
     </div>
 <% end %>
 
@@ -39,5 +39,4 @@
 </div>
 
 <div class="span-8 last rail">
-	<%= render :partial => "shared/generic_module" %>
 </div>

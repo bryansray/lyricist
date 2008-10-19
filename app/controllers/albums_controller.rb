@@ -48,7 +48,7 @@ class AlbumsController < ApplicationController
     respond_to do |format|
       if @album.save
         flash[:notice] = 'Album was successfully created.'
-        format.html { redirect_to(@album) }
+        format.html { redirect_to(@album.artist, @album) }
         format.xml  { render :xml => @album, :status => :created, :location => @album }
       else
         format.html { render :action => "new" }
