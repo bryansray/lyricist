@@ -397,7 +397,7 @@ div.content { background-color: #fff; min-height: 300px; padding-top: 2em; paddi
 /*MODULE FOR CONTENT AREA*/
 .mod {
 	border-bottom: 5px solid #e1e1e1;
-	margin-bottom: 3em;
+	margin-bottom: 1em;
 	padding-bottom: 1em;
 	-moz-border-radius: 1em;
 	-webkit-border-radius: 1em;
