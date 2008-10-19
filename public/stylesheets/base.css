@@ -394,8 +394,8 @@ div.content { background-color: #fff; min-height: 300px; padding-top: 2em; paddi
 
 
 
-
-div.mod {
+/*MODULE FOR CONTENT AREA*/
+.mod {
 	border-bottom: 5px solid #e1e1e1;
 	margin-bottom: 3em;
 	padding-bottom: 1em;
@@ -403,59 +403,65 @@ div.mod {
 	-webkit-border-radius: 1em;
 }
 
-div.mod div.hd {
+.mod div.hd {
 	padding-bottom: 6px;
 }
 
-div.mod div.bd ul {
+.mod div.bd ul {
 	list-style: none;
 	margin: 0;
 }
 
-div.mod div.bd ul li {
+.mod div.bd ul li {
 	border-top: 1px solid #e1e1e1;
 	padding: 4px 5px;
 }
 
-div.mod div.bd ul li:hover {
+.mod div.bd ul li:hover {
 	background: #fafafa;
 }
 
-div.mod div.bd h2 {
+.mod div.bd h2 {
 	margin-bottom: 0;
 	font-size: 1.2em;
 }
 
-div.mod div.bd h2 a{
+.mod div.bd h2 a{
 	text-decoration: none;
 }
 
-div.mod div.ft {
+.mod div.ft {
 	border-top: 1px dotted #e1e1e1;
 	padding: 10px 4px 0 4px;
 }
 
-div.mod div.ft p {
+.mod div.ft p {
 	font-size: 110%;
 	text-align: right;
 	margin-bottom: 0;
 }
 
-div.mod div.ft p a.feed {
+.mod div.ft p a.feed {
 	color: #949494;
 	text-decoration: none;
 }
 
-div.mod div.ft p a.feed:hover {
+.mod div.ft p a.feed:hover {
 	color: #666;
 }
 
-div.mod div.ft p a.feed img {
+.mod div.ft p a.feed img {
 	margin-right: 2px;
 	vertical-align: text-bottom;
 	float: none;
 	margin:0;
 }
+
+/*MODULE FOR RIGHT RAIL*/
+div.rail .mod {background-color: #e1e1e1;}
+div.rail ul { list-style: none; padding: 1em; margin: 0; }
+div.rail ul li h3{ margin-bottom: .5em; }
+
 
 
 
