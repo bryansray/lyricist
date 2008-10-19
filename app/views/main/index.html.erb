@@ -8,45 +8,15 @@
         
         <p>Lyricists is a <strong>totally free</strong> and <strong>extremely simple</strong> community based Lyrics site. We allow our members to create new lyrics, modify existing lyrics, and discuss the meaning of the lyrics all without having advertisements or have popups crammed down your throat like all the other circa 1995 lyrics sites out there. </p>
         
-        <div class="span-6">
-            
-			<h3>Most Popular Lyrics</h3>
-            
-            <ul>
-                <li>Stone Temple Pilots - Plush</li>
-                <li>Pearl Jam - Evenflow</li>
-            </ul>
-        </div>	
-        
-        
-        <div class="span-6 last">
-            <h3>Latest Lyrics</h3>
-            
-            <ul>
-                <li>Vertical Horizon - Life in the City</li>
-                <li>Guster - Happier</li>
-            </ul>
+        <div class="statistics" style="font-weight: bold; text-align: center; font-size: 16px">
+            <p>
+                There are currently 
+                <span class="number" style="color: red; font-size: 18px;"><%= Artist.count %></span> artists, 
+                <span class="number"><%= Album.count %></span> albums, <br/>
+                <span class="number"><%= Song.count %></span> songs, and
+                <span class="number"><%= Lyric.count %> lyrics!
+            </p>
         </div>
-
-        <div class="span-6">
-            <h3>Most Popular Lyrics</h3>
-            
-            <ul>
-                <li>Stone Temple Pilots - Plush</li>
-                <li>Pearl Jam - Evenflow</li>
-            </ul>
-        </div>	
-        
-        
-        <div class="span-6 last">
-            <h3>Latest Lyrics</h3>
-            
-            <ul>
-                <li>Vertical Horizon - Life in the City</li>
-                <li>Guster - Happier</li>
-            </ul>
-        </div>	
-        
     </div>
 
     <div class="span-9 last rail">
