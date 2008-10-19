@@ -1,30 +1,34 @@
-<h1>New song</h1>
+<div class="span-16 body">
+	<h1>New song</h1>
 
-<% form_for(@song) do |f| %>
-  <%= f.error_messages %>
+	<% form_for(@song) do |f| %>
+	  <%= f.error_messages %>
 
-  <p>
-    <%= f.label :song_title %>
-    <%= f.text_field :title %>
-  </p>
+	  <p>
+	    <%= f.label :song_title %>
+	    <%= f.text_field :title %>
+	  </p>
 
-  <p>
-    <%= f.label :artist_name %>
-    <% fields_for :artist do |artist| %>
-      <%= artist.text_field :name %>
-    <% end %>
-  </p>
+	  <p>
+	    <%= f.label :artist_name %>
+	    <% fields_for :artist do |artist| %>
+	      <%= artist.text_field :name %>
+	    <% end %>
+	  </p>
 
-  <p>
-    <%= f.label :album_name %>
-    <% fields_for :album do |album| %>
-      <%= album.text_field :name %>
-    <% end %>
-  </p>
+	  <p>
+	    <%= f.label :album_name %>
+	    <% fields_for :album do |album| %>
+	      <%= album.text_field :name %>
+	    <% end %>
+	  </p>
 
-  <p>
-    <%= f.submit "Create" %>
-  </p>
-<% end %>
+	  <p>
+	    <%= f.submit "Create" %>
+	  </p>
+	<% end %>
+</div>
 
-<%= link_to 'Back', songs_path %>
+<div class="span-8 last rail">
+	<%= link_to 'Back', songs_path %>
+</div>

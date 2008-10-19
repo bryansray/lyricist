@@ -1,4 +1,5 @@
-<h2 class="title">Search Results <%= "(#{@results.size})" unless @results.empty? %></h2>
+<div class="span-16 body">
+<h1>Search Results <%= "(#{@results.size})" unless @results.empty? %></h1>
 
 <% if @results.empty? %>
     <p>We were unable to find any lyrics matching your search criteria. Please <%= link_to "try again", searches_path %></p>
@@ -23,3 +24,8 @@
         <% end %>
     </div>
 <% end %>
+</div>
+
+<div class="span-8 last rail">
+	<%= render :partial => "shared/generic_module" %>
+</div>
