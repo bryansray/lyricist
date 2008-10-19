@@ -5,35 +5,8 @@
         </div>
 
         <div class="span-8 last">    
-            <div class="box list">
-                <h3>Popular Artists</h3>
-                <div class="items">
-                    <% @artists.each do |artist| %>
-                        <div class="artist" id="artist-<%= artist.id %>">
-                            <%= link_to artist.name, artist_path(artist) %>
-                        </div>
-                    <% end %>
-                </div>
-                
-                <div class="actions">
-                    <%= link_to "View All", artists_path %>
-                </div>
-            </div>
-            
-            <div class="box list">
-                <h3>Popular Albums</h3>
-                <div class="items">
-                    <% @albums.each do |album| %>
-                        <div class="album" id="album-<%= album.id %>">
-                            <%= link_to album.name, album_path(album) %>
-                        </div>
-                    <% end %>
-                </div>
-        
-                <div class="actions">
-                    <%= link_to "View All", albums_path %>
-                </div>
-            </div>
+            <%= render :partial => "shared/list_box", :locals => { :heading => "Popular Artists", :records => @artists } %>
+            <%= render :partial => "shared/list_box", :locals => { :heading => "Popular Albums", :records => @albums } %>
         </div>
     </div>
 

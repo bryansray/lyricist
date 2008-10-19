@@ -4,4 +4,8 @@ class Song < ActiveRecord::Base
   belongs_to :artist
   
   has_many :lyrics
+  
+  def to_s
+    title
+  end
 end

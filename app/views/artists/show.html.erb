@@ -3,37 +3,11 @@
 <div class="span-17">
     <div class="container">
         <div class="span-8">    
-            <div class="box list">
-                <h3>Albums</h3>
-                <div class="items">
-                    <% @artist.albums.each do |album| %>
-                        <div class="album" id="album-<%= album.id %>">
-                            <%= link_to album.name, album_path(album) %>
-                        </div>
-                    <% end %>
-                </div>
-                
-                <div class="actions">
-                    <%= link_to "View All", albums_path %>
-                </div>
-            </div>
+            <%= render :partial => "shared/list_box", :locals => { :heading => "Albums", :records => @artist.albums } %>
         </div>
 
         <div class="span-8 last">
-            <div class="box list">
-                <h3>Songs</h3>
-                <div class="items">
-                    <% @artist.songs.each do |song| %>
-                        <div class="song" id="album-<%= song.id %>">
-                            <%= link_to song.title, song_path(song) %>
-                        </div>
-                    <% end %>
-                </div>
-                
-                <div class="actions">
-                    <%= link_to "View All", songs_path %>
-                </div>
-            </div>
+            <%= render :partial => "shared/list_box", :locals => { :heading => "Songs", :records => @artist.songs } %>
         </div>
     </div>
 

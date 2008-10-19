@@ -1,0 +1,14 @@
+<div class="box list">
+    <h3><%= heading %></h3>
+    <div class="items">
+        <% records.each do |item| %>
+            <div class="<%= item.class.to_s.downcase %>" id="<%= item.class.to_s.downcase %>-<%= item.id %>">
+                <%= link_to item, polymorphic_path(item) %>
+            </div>
+        <% end %>
+    </div>
+    
+    <div class="actions">
+        <%= link_to "View All", polymorphic_path(records.first.class.new) %>
+    </div>
+</div>
