@@ -42,6 +42,8 @@ class SongsController < ApplicationController
   # POST /songs.xml
   def create
     @song = Song.new(params[:song])
+    @song.artist = Artist.find_or_create_by_name(params[:artist][:name])
+    @song.album = Album.find_or_create_by_name(params[:album][:name])
 
     respond_to do |format|
       if @song.save
@@ -59,6 +61,8 @@ class SongsController < ApplicationController
   # PUT /songs/1.xml
   def update
     @song = Song.find(params[:id])
+    @song.artist = Artist.find_or_create_by_name(params[:artist][:name])
+    @song.album = Album.find_or_create_by_name(params[:album][:name])
 
     respond_to do |format|
       if @song.update_attributes(params[:song])
