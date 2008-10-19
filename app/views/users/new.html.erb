@@ -1,9 +1,9 @@
-<div class="span-16 body">
-<% @user.password = @user.password_confirmation = nil %>
-
 <h1>Create your new Lyricist account</h1>
 
 <p>Creating a Lyricist account is simple and will allow you to start creating, editing, and commenting on the site. Take a minute to join the community!</p>
+
+<div class="span-16 body">
+<% @user.password = @user.password_confirmation = nil %>
 
 
 <% form_for @user, :html => { :class => "bigform" } do |f| %>
@@ -52,8 +52,4 @@
 	</div>
 <% end %>
 
-</div>
-
-<div class="span-8 last rail">
-	<%= render :partial => "shared/generic_module" %>
 </div>

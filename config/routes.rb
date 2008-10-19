@@ -15,6 +15,14 @@ ActionController::Routing::Routes.draw do |map|
   
   # Restful Authentication Resources
   
+  map.resources :artists do |artists|
+    artists.resources :albums do |albums|
+      albums.resources :songs do |songs|
+        songs.resources :lyrics
+      end
+    end
+  end
+  
   map.resources :users, :has_many => :lyrics
   map.resources :searches
   map.resources :artists, :has_many => :albums
