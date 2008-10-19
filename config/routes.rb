@@ -17,6 +17,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :users, :has_many => :lyrics
   map.resources :searches
   map.resources :artists
+  map.resources :songs
   map.resources :albums
   map.resources :lyrics
   map.resources :passwords
