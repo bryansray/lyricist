@@ -303,6 +303,7 @@ div.footer {
 	color: #7e89a2;
 	margin-bottom: 3em;
 	padding-top: 2em;
+	padding-bottom: 2em;
 	-moz-border-radius-bottomleft: 1em; -webkit-border-bottom-left-radius: 1em;
 	-moz-border-radius-bottomright: 1em; -webkit-border-bottom-right-radius: 1em;
 }
@@ -311,20 +312,11 @@ div.footer {
 	list-style-image: none;
 	list-style-position: outside;
 	list-style-type: none;
-}
-
-.footer ul li {
-	display: inline;
-	padding-right: 20px;
+	margin:0;
 }
 
 .footer ul li a {
 	color: #7E89A2;
-}
-
-.footer .copyright {
-	font-weight: bold;
-	text-align: right;
 }
 
 
