@@ -1,16 +1,22 @@
-<h1>Editing search</h1>
+<div class="span-16 body">
+	<h1>Editing search</h1>
 
-<% form_for(@search) do |f| %>
-  <%= f.error_messages %>
+	<% form_for(@search) do |f| %>
+	  <%= f.error_messages %>
 
-  <p>
-    <%= f.label :keywords %><br />
-    <%= f.text_field :keywords %>
-  </p>
-  <p>
-    <%= f.submit "Update" %>
-  </p>
-<% end %>
+	  <p>
+	    <%= f.label :keywords %><br />
+	    <%= f.text_field :keywords %>
+	  </p>
+	  <p>
+	    <%= f.submit "Update" %>
+	  </p>
+	<% end %>
 
-<%= link_to 'Show', @search %> |
-<%= link_to 'Back', searches_path %>
+	<%= link_to 'Show', @search %> |
+	<%= link_to 'Back', searches_path %>
+</div>
+
+<div class="span-8 last rail">
+
+</div>
