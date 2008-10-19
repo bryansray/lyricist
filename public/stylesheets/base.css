@@ -163,11 +163,7 @@ caption     { background: #eee; }
 		-moz-border-radius-topleft: 1em; -webkit-border-top-left-radius: 1em;
 		-moz-border-radius-topright: 1em; -webkit-border-top-right-radius: 1em;
 	}
-/*	.nav .menu {
-		float: left;
-		font-size: 12pt;
-	}*/
-	
+		
 	.nav ul li { margin: 0 .2em 0 0; padding: .5em 0 0 0; list-style-type: none; float: left; font-weight: bold; text-transform: uppercase; }
 	.nav ul li a { display: block; color: #fff; }
 	
@@ -179,22 +175,9 @@ caption     { background: #eee; }
 	-moz-border-radius-topright: .5em; -webkit-border-top-right-radius: .5em; }
 
 /* ---------- SEARCH --------------------------*/
-.nav form.search {
-	margin-top: .35em;
-	text-align: right;
-}
+.nav form.search { margin-top: .35em; text-align: right; }
+.nav form.search input[type=image] { padding-top: 5px; }
 
-.nav form.search input[type=image] {
-	padding-top: 5px;
-}
-
-/*.nav form.search .textfields { 
-	float: left;
-}
-.nav form.search .buttons {
-	float: right;
-	margin: 0;
-}*/
 .nav form.search input {	
 	font-size: 1em;
 	color: #666;
@@ -212,6 +195,8 @@ caption     { background: #eee; }
 	font-size: 14pt;
 }
 	
+	/* ---------- INDEX - main content -------------------*/	
+	.main .content h2 { color: orange; text-transform: uppercase; font-weight: bold;}
 
 	/* ---------- INDEX - LEAD --------------------------*/
 	.lead {
@@ -224,12 +209,12 @@ caption     { background: #eee; }
 		margin-top: 1em;
 	}
 
-	.content .lead h1 { color: #4E5963; margin-bottom: .5em; }
-	.content .lead h2 { margin-bottom: 0; font-size: 2em; color: #B1B1B1; }
+	.content .lead h1 { color: #4E5963; margin-bottom: .5em; text-transform: capitalize; }
+	.content .lead h2 { margin-bottom: 0; font-size: 2em; color: #B1B1B1; text-transform: capitalize; }
 
-	/* ---------- USER --------------------------*/
+	/* ---------- USER -----------------------------------*/
 
-	/* ---------- USER Index Page --------------------------*/
+	/* ---------- USER Index Page ------------------------*/
 	ul.users { display: block; }
 	.users .preview { float: left; padding: 10px; border: 1px solid #cecece; margin-right: 5px;	margin-bottom: 5px;	}
 	.users .preview img { float: left; }
@@ -384,6 +369,11 @@ div.content { background-color: #fff; min-height: 300px; padding-top: 2em; paddi
 .content h1 { position: relative; padding-bottom: 10px; font-weight: bold; color: #666; border-bottom: 1px solid #CECECE; margin-bottom: .4em; }
 .content h1 a {text-decoration: none; color:#666; border: none;}
 .content h1 span { position: absolute; right: 0; font-size:.5em; top: 1em; }
+
+.artists .content h1,
+.albums .content h1,
+.songs .content h1,
+.lyrics .content h1 { margin-bottom: 0;} 
 
 /*** PAGE TITLE ***/
 
