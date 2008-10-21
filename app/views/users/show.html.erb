@@ -1,4 +1,4 @@
-<h1><%= @user.name.blank? ? @user.email : @user.name %>'s Profile</h1>
+<h1><%= @user.pretty_name %>'s Profile</h1>
 
 <div class="span-16 body">
     <div class="span-9 biography append-1">
@@ -26,13 +26,13 @@
             <% @recent_lyrics.each_with_index do |lyric, i| %>
                 <div class="lyric <%= i % 2 == 0 ? 'odd' : 'even' %>" id="lyric-<%= lyric.id %>">
                     <div class="meta">
-                        <span class="artist">Artist</span> -
-                        <span class="album">Album</span> -
-                        <span class="title">Title</span>
+                        <span class="artist"><%= link_to lyric.song.artist.name, lyric.song.artist %></span> -
+                        <span class="album"><%= link_to lyric.song.album.name, lyric.song.album %></span> -
+                        <span class="title"><%= link_to lyric.song.title, lyric.song %></span>
                     </div>
                     
                     <div class="actions">
-                        View Lyrics
+                        <%= link_to 'View Lyrics', lyric %>
                     </div>
                 </div>
             <% end %>
